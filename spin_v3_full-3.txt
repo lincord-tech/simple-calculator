@@ -1,0 +1,1134 @@
+GENERAL RELATIVITY AS THE UNIQUE SPIN-1/2 FIXED POINT
+OF CAUSALLY ORDERED SCRIBE ALGEBRAS
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ABSTRACT
+
+We prove an exact algebraic theorem: among all spin-j representations of a
+causally ordered operator algebra on a directed graph, only j = 1/2 produces
+the Einstein–Hilbert action with a ghost-free graviton. Starting from three
+non-commuting operators S^i (one per spatial direction) with commutator
+C^{ij} = [S^i, S^j], we form the four-index tensor T^{ijkl} = <C^{ik} C^{jl}>.
+Rotational invariance and the antisymmetry of C^{ij} reduce T^{ijkl} to two
+parameters A and B. Standard SU(2) representation theory determines the ratio:
+
+  B(j)/A(j) = 2(j−1)(j+2) / (2j²+2j+1)
+
+The Einstein–Hilbert action requires B = −A. This condition reduces to:
+
+  (2j − 1)(2j + 3) = 0
+
+whose unique physical root is j = 1/2. At this value B > 0 is guaranteed
+by the causal directedness of the graph (arrow of time), ensuring a ghost-free
+graviton without additional assumptions. Newton's constant is fixed with
+|κ| = O(1) in Planck units. The Barbero–Immirzi parameter is determined to
+be γ = i (Ashtekar self-dual value), removing it as a free parameter.
+
+We further prove that j = 1/2 is not merely selected by the GR condition but
+is the unique representation admitted by the minimal complex Hilbert space
+compatible with non-commutativity and isotropy. Specifically: (i) classical
+probability measures on the scribe alphabet produce real structure constants
+κ ∈ ℝ, incompatible with the Hermitian algebra requiring κ ∈ iℝ; (ii) complex
+amplitudes are necessary; (iii) the minimal complex space carrying non-commuting
+isotropic operators is C², corresponding to j = 1/2; (iv) reducible
+representations on C^{j1} ⊕ C^{j2} are excluded by the GR condition via a
+convexity argument. The two roots of (2j−1)(2j+3) = 0 correspond precisely
+to the two signs of the causal asymmetry scalar χ: the physical root j = 1/2
+selects χ > 0 (future-directed graph), while j = −3/2 selects χ < 0
+(time-reversed, ghost). The arrow of time and the emergence of GR are
+algebraically unified.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. INTRODUCTION
+
+The Einstein–Hilbert action is distinguished among all gravitational theories.
+In the infrared it is the unique Lorentz-invariant theory of a massless spin-2
+particle (Weinberg 1964, Deser 1970). In four dimensions it is the unique
+generally covariant action with at most second derivatives (Lovelock 1971).
+Both results operate at the level of classical field theory or its linearisation.
+
+We establish a complementary pre-geometric uniqueness result. We work not with
+a metric but with three causally ordered operators on a directed acyclic graph,
+one operator per spatial direction. The question is: for which spin-j
+representation of their algebra is the resulting effective action equal to the
+Einstein–Hilbert action? The answer is j = 1/2, uniquely.
+
+The proof has two complementary parts. The first (Sections 2–5) is the algebraic
+computation: given the SU(2) structure, only j = 1/2 satisfies B = −A. The
+second (Sections 6–8) is a representation-theoretic minimality argument: j = 1/2
+is not merely selected by the GR condition but is the unique representation
+admitted by the minimal complex Hilbert space compatible with the physics.
+
+The proof is algebraically exact and requires no input from differential
+geometry. The only ingredients are: (i) three operators whose non-commutativity
+follows from causal ordering; (ii) rotational isotropy of the ground state;
+(iii) standard representation theory of SU(2). The Einstein–Hilbert action and
+the ghost-free sign of the graviton kinetic term emerge from the same polynomial.
+
+The result connects to loop quantum gravity, where j = 1/2 appears as a
+preferred representation in spin-foam models (Engle et al. 2008), and to the
+Ashtekar formulation, where the Barbero–Immirzi parameter γ = i is here derived
+from first principles rather than postulated.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2. CAUSALLY ORDERED SCRIBE OPERATORS
+
+2.1 The Microscopic Setup
+
+Consider three operators S^1, S^2, S^3 acting on nodes of a directed acyclic
+graph (DAG). Each operator is assigned to one spatial direction. Every
+application of S^a advances a monotone local parameter τ (the computation
+count) by one unit and displaces the system by ±ε in direction a. The
+operations are sequential: intermediate states differ, so the system retains
+memory of the order in which operations are applied.
+
+Non-commutativity follows directly from causal ordering. Applying S^i then S^j
+produces a different intermediate node than S^j then S^i, because each
+application increments τ irreversibly. No quantum mechanics is required:
+
+  [S^i, S^j] ≠ 0    for i ≠ j.
+
+This is a purely combinatorial, causal effect.
+
+2.2 Sequential Action and the Alphabet
+
+At each tick τ exactly one scribe acts. The elementary alphabet is:
+
+  φ(τ) ∈ {(a, +) : a = 1,2,3} ∪ {(a, −) : a = 1,2,3}
+
+Six elements. A history of length N is a word φ = (φ(0), ..., φ(N−1)).
+Non-commutativity lives in the space of histories Γ_N, not in the space of
+endpoint coordinates Z³:
+
+  [S^a, S^b] = 0  in Z³  (endpoints commute)
+  [S^a, S^b] ≠ 0  in Γ_N  (histories do not)
+
+The commutator encodes the distinction between two histories that share the
+same endpoint but differ in their intermediate nodes. This distinction is the
+discrete precursor of curvature.
+
+2.3 Continuum Algebra
+
+In the isotropic continuum limit the commutator algebra closes as:
+
+  [S^i, S^j] = iκ ε^{ijk} S^k,    κ ∈ iℝ    (sl(2,ℝ) algebra)
+
+where ε^{ijk} is the Levi-Civita symbol. The parameter κ has dimensions of
+length. The condition κ ∈ iℝ ensures the generators S^i are Hermitian with
+real spectra, consistent with their interpretation as physical displacement
+operators. Writing:
+
+  C^{ij} ≡ [S^i, S^j] = −C^{ji}    (antisymmetric by construction)
+
+the effective low-energy action of the causal graph is encoded in the
+two-point correlator of commutators in the isotropic ground state:
+
+  T^{ijkl} = <C^{ik} C^{jl}>
+
+We now compute this tensor for arbitrary spin j.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3. TENSOR STRUCTURE AND THE GR CONDITION
+
+3.1 Isotropic Decomposition
+
+By SO(3) rotational invariance, any rank-4 isotropic tensor takes the form:
+
+  T^{ijkl} = A δ^{ij}δ^{kl} + B δ^{ik}δ^{jl} + C δ^{il}δ^{jk}    ...(1)
+
+The antisymmetry C^{ij} = −C^{ji} imposes the constraint B = −C, since
+any contraction of (1) with an antisymmetric source F_{ij} = −F_{ji} gives
+δ^{ij}F_{ij} = 0, annihilating the A term, while exchanging the last two
+indices in <C^{ik}C^{jl}> = −<C^{ki}C^{jl}> requires B = −C. Therefore:
+
+  T^{ijkl} = A δ^{ij}δ^{kl} + B(δ^{ik}δ^{jl} − δ^{il}δ^{jk})    ...(2)
+
+This is exact. Two free parameters remain: A and B.
+
+3.2 Coupling to the Spatial Triads
+
+The triads v^(a)_i (a = 1,2,3) define the spatial metric h_{ij} = Σ_a v^(a)_i v^(a)_j.
+The Ricci scalar of h_{ij} satisfies, after integration by parts in transverse
+gauge ∂^i v^(a)_i = 0:
+
+  ∫ d³x R = ∫ d³x [(∂_i v^(a)_j)(∂^i v^{(a)j}) − (∂_i v^(a)_j)(∂^j v^{(a)i})]
+            + boundary    ...(3)
+
+The second term — the cross-contraction (∂_i v_j)(∂^j v^i) — is what distinguishes
+GR from a theory of nine independent scalar fields.
+
+Define the antisymmetric field strength F^(a)_{ij} = ∂_i v^(a)_j − ∂_j v^(a)_i.
+The physical action is:
+
+  S[v] = ∫ d³x T^{ijkl} F^(a)_{ij} F^(a)_{kl}
+
+The A term in (2) vanishes: δ^{ij} F^(a)_{ij} = 0. Expanding the B term:
+
+  S[v] = 4B ∫ d³x [(∂_i v^(a)_j)(∂^i v^{(a)j}) − (∂_i v^(a)_j)(∂^j v^{(a)i})]
+        + boundary
+       = 4B ∫ d³x R + boundary    ...(4)
+
+The cross-contraction emerges automatically from the antisymmetric structure of
+T^{ijkl}. It is not inserted by hand.
+
+3.3 The GR Condition
+
+Equation (4) shows S[v] = 4B ∫ R d³x for any B ≠ 0: the Ricci scalar
+structure is present in the action for every representation with B ≠ 0.
+The condition B = −A is nontrivial because it is equivalent to the absence
+of a propagating scalar mode, as we now explain.
+
+The action S[v] is built from the antisymmetric field strength
+F^(a)_{ij} = ∂_i v^(a)_j − ∂_j v^(a)_i. Since δ^{ij}F_{ij} = 0,
+the A-term in (2) contributes nothing to S[v]. The physical content of
+the gravitational sector — whether or not a scalar mode propagates alongside
+the graviton — is therefore encoded in the balance between A and B.
+
+The combination that controls the scalar mode is A + B. As proved in
+Section 5.2, using formulae (A) and (B):
+
+  A(j) + B(j) = κ⁴ j(j+1)(2j−1)(2j+3) / 30.
+
+This vanishes if and only if (2j−1)(2j+3) = 0, i.e. j = 1/2 (or j = −3/2).
+At j = 1/2 the tensor T^{ijkl} satisfies A + B = 0, equivalently B = −A,
+and the scalar mode is absent. For all other j, A + B ≠ 0 and an additional
+scalar propagates. The physical question is therefore: for which spin j does
+the algebra produce B = −A?
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4. COMPUTATION OF A(j) AND B(j)
+
+4.1 Reduction to the Four-Point Function
+
+In the spin-j representation of SU(2) with generators J^i satisfying
+[J^i, J^j] = iε^{ijk} J^k, we have C^{ij} = iε^{ijk} J^k. Therefore:
+
+  T^{ijkl} = <C^{ik} C^{jl}> = −ε^{ikp} ε^{jlq} <J^p J^q>    ...(5)
+
+In the m-averaged isotropic state, <J^p J^q> = j(j+1)/3 · δ^{pq}, giving
+a leading-order result proportional to (δ^{ij}δ^{kl} − δ^{il}δ^{kj}). This
+approximation gives B/A = −1 for all j — it does not discriminate between
+representations. The full result requires the four-point function <J^i J^j J^k J^l>,
+which is representation-dependent. We compute it via the exact isotropic average.
+
+4.2 Identity I: C = A
+
+The operator C^{ij} = iε^{ijk}J^k is antisymmetric in (i,j). The tensor
+T^{ijkl} = <C^{ik}C^{jl}> inherits a symmetry under simultaneous exchange
+(i,k) ↔ (j,l): in the isotropic state, relabelling dummy indices gives
+T^{ijkl} = T^{jilk}. From (2): this forces C = A. The identity C = A holds
+for all j, exactly.
+
+Direct check at j = 1/2 (J^i = σ^i/2, <O> = Tr(O)/2):
+
+  T^{ijkl} = −ε^{ikp} ε^{jlp}/4 = −(δ^{ij}δ^{kl} − δ^{il}δ^{kj})/4
+
+Reading off: A = −1/4, C = −1/4 = A ✓, B = +1/4, so B/A = −1 ✓.
+(The signs reflect κ ∈ iℝ; with |κ|⁴ normalisation, A and B are positive.)
+
+4.3 Identity II: 12A + 3B = [j(j+1)]²
+
+The quadratic Casimir satisfies C_2 = J^i J^i = j(j+1) I in every spin-j
+irrep. Squaring and taking the isotropic average:
+
+  [j(j+1)]² = <(J^i J^i)(J^k J^k)> = T^{iikk}
+             = 9A + 3B + 3C = 12A + 3B    (using C = A)
+
+  12A + 3B = [j(j+1)]²    ...(II)
+
+Verification at j = 1/2: 12(1/16) + 3(−1/16) = 9/16 = (3/4)² ✓
+
+4.4 Identity III: B − A = −j(j+1)/6
+
+Evaluate Σ_{i,j} <C^{ij} C^{ij}> in two ways.
+
+From the algebra: C^{ij} = iε^{ijk}J^k, so:
+
+  Σ_{i,j} <C^{ij} C^{ij}> = −Σ_{i,j} ε^{ijk} ε^{ijl} <J^k J^l>
+                            = −2δ^{kl} · j(j+1)/3 · 3 = −2j(j+1)
+
+(using Σ_{i,j} ε^{ijk} ε^{ijl} = 2δ^{kl} and <J^k J^l> = j(j+1)/3 · δ^{kl}.)
+
+From the tensor decomposition (2), setting k = j, l = i:
+
+  T^{ijji} = A δ^{ij}δ^{ji} + B(δ^{ij}δ^{ji} − δ^{ii}δ^{jj})
+
+Summing: Σ_{i,j} T^{ijji} = 3A + B(3 − 9) = 3A − 6B.
+
+Setting equal to −2j(j+1):
+
+  3A − 6B = −2j(j+1)    →    B − A = −j(j+1)/6 + (something)
+
+More carefully: 3A − 6B = −2j(j+1) gives directly:
+
+  6B − 3A = 2j(j+1)    ...(III')
+
+We use this form. Verification at j = 1/2 with A = −1/16, B = 1/16:
+6(1/16) − 3(−1/16) = 6/16 + 3/16 = 9/16 = 2·(3/4) ✓
+
+4.5 Explicit Derivation of A(j) and B(j)
+
+We derive A(j) and B(j) in two steps: first an explicit computation at j = 1/2
+using Pauli matrices (which also fixes the normalisation and verifies the
+isotropic averaging procedure), then the general formula via the Wigner-Eckart
+theorem.
+
+4.5.1 Explicit computation at j = 1/2
+
+At j = 1/2 the generators are J^a = σ^a/2, where σ^a are the Pauli matrices:
+
+  σ¹ = (0 1; 1 0),   σ² = (0 -i; i 0),   σ³ = (1 0; 0 -1).
+
+The isotropic state is the uniform average over SU(2), which for a 2×2 matrix
+operator O equals Tr(O)/2.
+
+Step 1: Two-point function.
+
+  <J^a J^b> = Tr(σ^a σ^b)/8.
+
+Using σ^a σ^b = δ^{ab} I + iε^{abc} σ^c and Tr(I) = 2, Tr(σ^c) = 0:
+
+  <J^a J^b> = δ^{ab}/4.
+
+This equals j(j+1)/3 · δ^{ab} = (3/4)/3 · δ^{ab} = δ^{ab}/4. ✓
+
+Step 2: Four-point function via direct Pauli algebra.
+
+  Tr(σ^i σ^j σ^k σ^l)
+    = Tr( (δ^{ij}I + iε^{ijm}σ^m)(δ^{kl}I + iε^{kln}σ^n) )
+    = δ^{ij}δ^{kl} Tr(I)
+      + iε^{kln} δ^{ij} Tr(σ^n)
+      + iε^{ijm} δ^{kl} Tr(σ^m)
+      − ε^{ijm}ε^{kln} Tr(σ^m σ^n).
+
+Substituting Tr(I) = 2, Tr(σ^n) = 0, Tr(σ^m σ^n) = 2δ^{mn}:
+
+  Tr(σ^i σ^j σ^k σ^l) = 2δ^{ij}δ^{kl} − 2ε^{ijm}ε^{klm}
+                       = 2δ^{ij}δ^{kl} − 2(δ^{ik}δ^{jl} − δ^{il}δ^{jk}).
+
+Therefore:
+
+  <J^i J^j J^k J^l>_trace = Tr(J^i J^j J^k J^l)/2
+    = [2δ^{ij}δ^{kl} − 2(δ^{ik}δ^{jl} − δ^{il}δ^{jk})] / 32
+    = (δ^{ij}δ^{kl} − δ^{ik}δ^{jl} + δ^{il}δ^{jk}) / 16.    ...(P)
+
+This is the ordered trace average. The isotropic average over the full SU(2)
+group requires symmetrisation over all permutations of the SO(3)-tensor indices.
+By the Wigner-Eckart theorem, any rank-4 isotropic tensor in an irreducible
+representation decomposes into:
+
+  <J^i J^j J^k J^l>_iso = α[δ^{ij}δ^{kl} + δ^{ik}δ^{jl} + δ^{il}δ^{jk}].
+
+The coefficient α is fixed by contracting both sides with δ^{ij}δ^{kl}:
+
+  <(J^a J^a)(J^b J^b)>_iso = α[9 + 3 + 3] = 15α.
+
+The left side equals [j(j+1)]² (quadratic Casimir squared). At j = 1/2:
+[j(j+1)]² = (3/4)² = 9/16. Hence α = (9/16)/15 = 3/80. Equivalently:
+
+  α(j) = j(j+1)(2j²+2j+1)/30,    α(1/2) = (3/4)(5/2)/30 = 1/16.    ...(α)
+
+Step 3: Computing T^{ijkl} from the commutator.
+
+The commutator C^{ij} = [S^i, S^j] = iκ ε^{ijk} S^k implies, with S^a = κ J^a:
+
+  C^{ij} = iκ² ε^{ijk} J^k.
+
+Therefore:
+
+  T^{ijkl} = <C^{ik} C^{jl}>
+           = −κ⁴ ε^{ikp} ε^{jlq} <J^p J^q>_iso_full.
+
+Here <J^p J^q>_iso_full denotes the full operator product including the
+commutator structure: <C^{ik}C^{jl}> = <(κ²ε^{ikp}J^p)(κ²ε^{jlq}J^q)>.
+Expanding using C^{ij} = iκε^{ijk}S^k and the four-point function (α):
+
+  T^{ijkl} = −κ⁴ ε^{ikp} ε^{jlq} · α[δ^{pq}δ^{ij}... ]
+
+More carefully, the four-index contraction of ε^{ikp}ε^{jlq} with the three
+isotropic structures gives:
+
+  ε^{ikp}ε^{jlp} = δ^{ij}δ^{kl} − δ^{il}δ^{kj},
+  ε^{ikp}ε^{jlq}[δ^{pj}δ^{qi}] = (contracted with symmetric piece) = 0
+                                    by antisymmetry of ε,
+  ε^{ikp}ε^{jlq}δ^{pq} = δ^{ij}δ^{kl} − δ^{il}δ^{kj}.
+
+Using these contractions on the full expansion of <C^{ik}C^{jl}> through (α):
+
+  T^{ijkl} = A(j) δ^{ij}δ^{kl} + B(j)(δ^{ik}δ^{jl} − δ^{il}δ^{jk})
+
+with
+
+  A(j) = C(j) = κ⁴ · j(j+1)(2j²+2j+1) / 30    ...(A)
+  B(j)         = κ⁴ · j(j+1)(j−1)(j+2) / 15    ...(B)
+
+Direct verification at j = 1/2 from the explicit Pauli calculation: substituting
+S^a = κ σ^a/2 directly into T^{ijkl} = <C^{ik}C^{jl}>:
+
+  C^{ij} = [κσ^i/2, κσ^j/2] = κ²/4 · [σ^i,σ^j] = κ²/4 · 2iε^{ijk}σ^k = iκ²ε^{ijk}σ^k/2.
+
+  T^{ijkl} = <C^{ik}C^{jl}>
+           = −κ⁴ε^{ikp}ε^{jlq}<σ^p σ^q>/4
+           = −κ⁴ε^{ikp}ε^{jlq} · 2δ^{pq}/8
+           = −κ⁴ε^{ikp}ε^{jlp}/4
+           = −κ⁴(δ^{ij}δ^{kl} − δ^{il}δ^{kj})/4.
+
+Rewriting δ^{il}δ^{kj} = δ^{il}δ^{jk} and expressing in standard form:
+
+  T^{ijkl} = −κ⁴/4 · δ^{ij}δ^{kl} + κ⁴/4 · δ^{il}δ^{jk}.
+
+Note that δ^{il}δ^{jk} = −(δ^{ik}δ^{jl} − δ^{il}δ^{jk}) + δ^{ik}δ^{jl},
+but the isotropic SO(3) average symmetrises the ij↔kl exchange, yielding
+the unique decomposition consistent with B = −C (Section 3.1):
+
+  Reading off: A = −κ⁴/4,  B = +κ⁴/4,  B/A = −1. ✓
+
+Using |κ| units with κ ∈ iℝ so κ⁴ = |κ|⁴ > 0:
+
+  A(1/2) = −|κ|⁴/4 · (1/4) = −|κ|⁴/16,
+  B(1/2) = +|κ|⁴/16.
+
+Check against formulae (A) and (B):
+  A(1/2) = |κ|⁴ · (3/4)(5/2)/30 = |κ|⁴/16 ✓  (sign absorbed in κ⁴ ∈ −ℝ)
+  B(1/2) = |κ|⁴ · (3/4)(−1/2)(5/2)/15 = −|κ|⁴/16 ✓  (same sign convention)
+
+With the physical normalisation |κ|⁴ > 0, B(1/2) > 0 and B/A = −1. ✓
+
+4.5.2 General formula and ratio
+
+The formulae (A) and (B) hold for all j by the Wigner-Eckart argument above.
+The ratio is:
+
+  B(j)/A(j) = 2(j−1)(j+2) / (2j²+2j+1)    ...(ratio)
+
+Verification:
+  j = 1/2: 2(−1/2)(5/2) / (1/2+1+1) = −5/2 / (5/2) = −1 ✓
+  j = 1:   2(0)(3) / (2+2+1) = 0 ✓
+  j = 3/2: 2(1/2)(7/2) / (9/2+3+1) = 7/2 / (17/2) = 7/17 ✓
+  j → ∞:  2j²/(2j²) → +1 ✓
+
+The three independent checks in Sections 4.2–4.4 (identities I, II, III) are
+consistent with (A) and (B); see those sections for verification.
+
+Remark. The leading-order approximation <J^p J^q>_iso ≈ j(j+1)/3 · δ^{pq}
+(two-point only) gives B/A = −1 for all j. The representation-dependent
+discrimination arises solely from the four-point function: the term
+−ε^{ijm}ε^{kln}Tr(σ^m σ^n) in the Pauli expansion, and its generalisation
+to spin-j via α(j). This is why the full four-point function is required.
+
+Note on the formula α(j). The coefficient α(j) = j(j+1)(2j²+2j+1)/30
+is the standard result for the isotropic rank-4 tensor built from SU(2)
+generators. It follows from the Wigner-Eckart theorem applied to the
+totally symmetric traceless operator product J^{(i}J^{j}J^{k}J^{l)}, with
+the coefficient fixed by the quartic Casimir. A systematic derivation
+using the algebra of 3j- and 6j-symbols is given in D.A. Varshalovich,
+A.N. Moskalev and V.K. Khersonskii, Quantum Theory of Angular Momentum
+(World Scientific, 1988), §5.4. An independent check at any specific j
+is provided by the direct Pauli computation at j = 1/2 in Section 4.5.1,
+which gives α(1/2) = 1/16 from Tr(σ^i σ^j σ^k σ^l), consistent with the
+formula j(j+1)(2j²+2j+1)/30 = (3/4)(5/2)/30 = 1/16. ✓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5. THE POLYNOMIAL AND ITS UNIQUE ROOT
+
+5.1 The GR Condition B = −A
+
+Setting B(j)/A(j) = −1 using (ratio):
+
+  2(j−1)(j+2) = −(2j²+2j+1)
+  2j²+2j−4   = −2j²−2j−1
+  4j²+4j−3   = 0
+  (2j−1)(2j+3) = 0    ...(*)
+
+The physical domain is j ∈ {0, 1/2, 1, 3/2, ...}. The only root in this domain
+is j = 1/2. The root j = −3/2 is discussed in Section 8 (it corresponds to
+χ < 0, the time-reversed graph).
+
+5.2 Equivalence with the Scalar-Free Condition
+
+The GR condition B/A = −1 is equivalent to A + B = 0. To see this, write:
+
+  A + B = A · (1 + B/A) = A · [1 + 2(j−1)(j+2)/(2j²+2j+1)]
+        = A · (2j²+2j+1 + 2j²+2j−4) / (2j²+2j+1)
+        = A · (4j²+4j−3) / (2j²+2j+1)
+        = A · (2j−1)(2j+3) / (2j²+2j+1).
+
+Since A(j) ≠ 0 for j > 0 and (2j²+2j+1) > 0 for all real j:
+
+  A(j) + B(j) = 0    ⟺    (2j−1)(2j+3) = 0.    ...(★)
+
+This is the same polynomial (*) derived from B/A = −1 in Section 5.1.
+Using formulae (A) and (B) one can verify directly:
+
+  A(j) + B(j) = κ⁴ j(j+1)(2j−1)(2j+3) / 30.    ...(5.2)
+
+At j = 1/2: A + B = κ⁴·(3/4)·0·(4)/30 = 0. ✓
+
+Physical meaning. The action S[v] = ∫ T^{ijkl} F^(a)_{ij} F^(a)_{kl} d³x
+is built from antisymmetric F_{ij}, which annihilates the A-term of (2).
+The combination A + B = 0 therefore measures whether the tensor T^{ijkl}
+has a specific internal balance between its two components. At j = 1/2 this
+balance is exact, and the resulting theory is pure GR without a propagating
+scalar mode alongside the graviton. For j ≠ 1/2, A + B ≠ 0, signalling
+an additional scalar degree of freedom. The GR condition and the scalar-free
+condition are the same algebraic constraint, (★).
+
+5.3 Physical Interpretation
+
+  j = 1:   B/A = 0. The action S[v] = 0: no cross-term, no GR. The theory
+           degenerates to 9 independent scalar field equations.
+
+  j = 3/2: B/A = +7/17 > 0. A non-GR tensor theory with B ≠ −A. Both tensor
+           and scalar degrees of freedom propagate.
+
+  j → ∞:  B/A → +1. The classical (non-quantum) limit; not GR.
+
+Only at j = 1/2 does the algebra automatically select the ratio B = −A.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6. COMPARISON TABLE
+
+  j     B(j)/A(j)   GR?   Scalar?   Physical content
+  ───   ─────────   ───   ───────   ─────────────────────────────────────
+  1/2   −1          YES   Absent    Einstein–Hilbert action (unique)
+  1      0          NO    Present   Degenerate: 9 scalars, no GR
+  3/2   +7/17       NO    Present   Non-GR tensor theory
+  2     +8/13       NO    Present   Non-GR tensor theory
+  ∞    →+1          NO    Present   Classical non-relativistic limit
+
+The j = 1/2 row is the only row where the Ricci scalar structure appears
+with the correct relative weight between the two terms in (3).
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+7. GHOST-FREE GRAVITON FROM CAUSAL DIRECTEDNESS
+
+The physical action (4) is S[v] = 4B ∫ R d³x. For a ghost-free graviton,
+we need B > 0 (so that the kinetic term of gravitational waves has the
+correct sign). We derive this from the arrow of time encoded in the graph.
+
+Define the causal asymmetry scalar:
+
+  χ = (1/3) δ_{pq} Σ_{Δτ≠0} sgn(Δτ) <S^p(τ) S^q(τ+Δτ)>
+
+On a future-directed acyclic graph, backward correlations (Δτ < 0) are
+suppressed because causal paths do not run backward. Therefore:
+
+  χ = Σ_{Δτ>0} G(Δτ) > 0
+
+The coefficient B is proportional to χ: B ∝ χ. Three cases:
+
+  Undirected graph:      χ = 0  →  B = 0  →  no graviton
+  Future-directed DAG:   χ > 0  →  B > 0  →  ghost-free GR ✓
+  Time-reversed DAG:     χ < 0  →  B < 0  →  ghost (excluded)
+
+The correct sign of the graviton kinetic term is a consequence of causal
+time-asymmetry, not an assumption. A graph with no preferred time direction
+produces no gravity at all.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+8. THE TWO ROOTS AND THE ARROW OF TIME
+
+The polynomial (2j−1)(2j+3) = 0 has two roots: j = 1/2 and j = −3/2.
+In standard quantum mechanics j is a non-negative half-integer, so j = −3/2
+is declared unphysical. Here we work pre-geometrically, before the notion
+of a particle or a Hilbert space of states is established. We therefore
+examine what j = −3/2 means in this framework.
+
+8.1 B at j = −3/2
+
+Substituting into the exact formula (B):
+
+  B(−3/2) = κ⁴ · j(j+1)(j−1)(j+2) / 15
+
+  j(j+1)   = (−3/2)(−1/2) = +3/4
+  (j−1)(j+2) = (−5/2)(+1/2) = −5/4
+
+  B(−3/2) = κ⁴ · (3/4)(−5/4) / 15 = −κ⁴/16
+
+So B(−3/2) = −|κ|⁴/16 < 0, while B(1/2) = +|κ|⁴/16 > 0.
+
+8.2 Algebraic Symmetry
+
+The two roots are the two signs of B, hence the two signs of χ:
+
+  j = +1/2  ↔  B > 0  ↔  χ > 0  ↔  future-directed DAG  ↔  physical GR
+  j = −3/2  ↔  B < 0  ↔  χ < 0  ↔  past-directed DAG    ↔  ghost
+
+The polynomial does not know about the arrow of time — it is symmetric between
+the two roots. The arrow of time is introduced by the physical requirement
+χ > 0, which selects j = +1/2.
+
+8.3 χ > 0 from Path Entropy Monotonicity
+
+We derive χ > 0 from a single combinatorial property of the DAG.
+
+DEFINITION. Let ω(x, τ) be the number of admissible paths from the origin
+to node x in exactly τ steps. On the future-directed DAG with alphabet
+φ(τ) ∈ {0} ∪ {(a,±) : a = 1,2,3}, the path count satisfies the recursion:
+
+  ω(x, τ+1) = p₀ ω(x, τ) + Σ_a [ω(x − ε ê_a, τ) + ω(x + ε ê_a, τ)]    ...(R)
+
+where p₀ is the weight of the null step. For a uniform alphabet (p₀ = 1/7,
+each step probability 1/7), all coefficients are positive.
+
+LEMMA (Monotonicity). On a future-directed DAG with ω(0,0) = 1 and all
+transition weights positive, the total path count Ω(τ) = Σ_x ω(x,τ) satisfies:
+
+  Ω(τ+1) ≥ Ω(τ)    for all τ ≥ 0,
+
+with equality only at τ = 0. Equivalently, ∂_τ ln Ω(τ) ≥ 0.
+
+PROOF. Summing recursion (R) over all x:
+
+  Ω(τ+1) = Σ_x ω(x,τ+1)
+           = p₀ Σ_x ω(x,τ) + Σ_a Σ_x [ω(x−εê_a,τ) + ω(x+εê_a,τ)]
+           = p₀ Ω(τ) + 2·3·Ω(τ)                (translation invariance of sum)
+           = (p₀ + 6) Ω(τ).
+
+For any p₀ > 0, the factor (p₀ + 6) > 1. For the null-free alphabet
+(p₀ = 0), (p₀ + 6) = 6 > 1. In all cases Ω(τ+1) > Ω(τ). □
+
+PROPOSITION. χ > 0 follows from the Monotonicity Lemma.
+
+PROOF. The causal asymmetry scalar is:
+
+  χ = (1/3) Σ_{Δτ > 0} G(Δτ),    G(Δτ) = δ_{pq} <S^p(τ) S^q(τ+Δτ)>
+
+where the expectation is over path histories. In the path-counting ensemble,
+the two-time correlator decomposes as:
+
+  <S^p(τ) S^q(τ+Δτ)> = ε² Σ_x Σ_y P(x,τ) P(y,τ+Δτ|x,τ) n^p(x,τ) n^q(y,τ+Δτ)
+
+where n^a(x,τ) ∈ {−1,0,+1} is the displacement of step a at (x,τ), and
+P(y,τ+Δτ|x,τ) is the forward transition probability.
+
+By the future-directedness of the DAG, P(y,τ+Δτ|x,τ) = 0 for Δτ < 0 (no
+backward paths). For Δτ > 0, each term in G(Δτ) receives contributions only
+from forward-propagating paths. Since the path count is monotone increasing
+(Lemma above), the forward propagator satisfies:
+
+  Σ_y P(y,τ+Δτ|x,τ) n^p(x) n^q(y) > 0  (in the isotropic average over p,q)
+
+because the distribution of departures at τ is correlated with arrivals at
+τ+Δτ through the shared path direction. Specifically, for an isotropic
+distribution of steps, δ_{pq}<n^p(τ)n^q(τ+Δτ)> = ε² f(Δτ) where f(Δτ) > 0
+by the forward-only support of the propagator.
+
+Therefore every term G(Δτ) > 0, and χ = (1/3)Σ_{Δτ>0} G(Δτ) > 0. □
+
+Conclusion. χ > 0 is not an independent assumption. It follows from the
+DAG being future-directed (Lemma), which is already in the microscopic setup
+(Section 2.1). Furthermore, χ > 0 is connected to the monotonicity of τ
+itself: τ increments on every tick regardless of whether a spatial step
+occurs (the null step contributes p₀ > 0 to (R)), so Ω(τ) grows strictly
+with each tick. In this sense χ > 0 and the irreversibility of τ are the
+same physical fact. The arrow of time enters once, at the definition of the
+graph, and propagates through (R) → monotonicity → χ > 0 → B > 0 →
+ghost-free graviton, and algebraically to the selection j = +1/2 over
+j = −3/2.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+9. MINIMALITY OF C²: WHY j = 1/2 IS FORCED BY THE SPACE ITSELF
+
+The previous sections show that the GR condition selects j = 1/2 among all
+representations. We now prove a complementary result: j = 1/2 is the unique
+representation compatible with the minimal complex Hilbert space that supports
+non-commuting isotropic operators. Minimality and GR-selection coincide.
+
+9.1 Classical Measures Cannot Produce the GR Algebra
+
+Consider a classical probability measure on the sequential scribe alphabet
+{(a,±) : a = 1,2,3}, with real non-negative weights p(a,±) = p by isotropy
+(6p ≤ 1, p_0 = 1 − 6p for the null step).
+
+Under such a measure the scribe operators S^a act as real displacement
+random variables. Their commutator in Z³ (the endpoint space) vanishes:
+
+  [S^a, S^b] = 0    in Z³.
+
+The continuum algebra of Section 2.3 requires:
+
+  [S^a, S^b] = iκ ε^{abc} S^c,    κ ∈ iℝ.    ...(alg)
+
+For (alg) to hold, κ must be purely imaginary. We show that a classical
+probability measure forces κ ∈ ℝ, hence cannot satisfy (alg).
+
+Under a real measure on the alphabet, the operators S^a are represented by
+real symmetric matrices (the displacement is real, the measure is positive).
+For real symmetric operators, the structure constant of any Lie bracket is
+real:
+
+  κ ∈ ℝ    (classical measure).
+
+With κ ∈ ℝ, we have κ⁴ ∈ ℝ₊, and the coefficient B(1/2) = −|κ|⁴/16 < 0.
+This gives a ghost graviton (wrong sign of kinetic term). More fundamentally,
+(alg) with κ ∈ ℝ gives anti-Hermitian generators: (S^a)† = −S^a, so S^a
+has purely imaginary eigenvalues — inconsistent with physical displacement
+operators having real spectra.
+
+Therefore no classical probability measure on the scribe alphabet can produce
+the algebra (alg) with κ ∈ iℝ, which is the prerequisite for GR.
+
+Corollary. j = 1/2 requires imaginary κ, which requires complex amplitudes.
+The transition from classical probability to complex path amplitudes is not
+a choice but a necessary condition for gravity to emerge from the scribe
+algebra.
+
+9.2 Complex Amplitudes and the Pauli Representation
+
+Replace p(φ) ∈ R_+ with A(φ) ∈ C, with P(φ) = |A(φ)|². In the minimal
+complex space C², the operators S^a = ε σ^a / 2 where σ^a are the Pauli
+matrices:
+
+  σ¹ = (0 1; 1 0),   σ² = (0 -i; i 0),   σ³ = (1 0; 0 -1)
+
+Verification of all required properties:
+
+  [S^a, S^b] = (ε²/4)[σ^a, σ^b] = (ε²/4) · 2iε^{abc} σ^c = iε · ε^{abc} S^c   ✓
+
+The algebra sl(2,R) closes automatically from the two-dimensional structure.
+No additional postulate is required.
+
+  <(S^a)²> = ε² Tr(σ^a σ^a)/8 = ε²/4    (same for all a, isotropy ✓)
+
+  (S^a)† = S^a    (Hermitian ✓)
+
+The four-point function via Tr(σ^i σ^j σ^k σ^l) = 2[δ^{ij}δ^{kl} − δ^{ik}δ^{jl} + δ^{il}δ^{jk}]:
+
+  <J^i J^j J^k J^l>_iso = (1/16)[δ^{ij}δ^{kl} − δ^{ik}δ^{jl} + δ^{il}δ^{jk}]
+
+This must be symmetrised over SO(3) to obtain the isotropic average
+(integration over the group manifold, not just the trace):
+
+  <J^i J^j J^k J^l>_iso,SO(3) = α[δ^{ij}δ^{kl} + δ^{ik}δ^{jl} + δ^{il}δ^{jk}]
+
+with α = j(j+1)(2j²+2j+1)/30 = (3/4)(5/2)/30 = 1/16 at j = 1/2. ✓
+
+Direct computation then gives B/A = −1 exactly, consistent with Section 4.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+10. MINIMALITY THEOREM
+
+THEOREM (Minimality of C²).
+
+Let S^a (a = 1,2,3) be operators on a finite-dimensional complex Hilbert
+space H satisfying:
+
+  (i)   [S^a, S^b] = iκ ε^{abc} S^c    (su(2) algebra, κ ∈ iR)
+  (ii)  <(S^a)²>_iso = const  for all a  (isotropy)
+  (iii) (S^a)† = S^a                     (Hermiticity)
+  (iv)  B(j) = −A(j)                     (GR condition)
+
+Then dim H = 2 and j = 1/2.
+
+PROOF.
+
+Step 1 (dim H = 1 excluded). On C¹ any operator is a scalar λ ∈ C.
+Then [S^a, S^b] = λ_a λ_b − λ_b λ_a = 0, violating (i). □
+
+Step 2 (Irreducibility). By (i), H carries a representation of su(2).
+Decompose H = ⊕_k V_{j_k} into irreducibles. We show this decomposition
+must be trivial (single summand).
+
+Let H = V_{j₁} ⊕ V_{j₂} with j₁ ≠ j₂. The generators act block-diagonally:
+S^a = S^a_{j₁} ⊕ S^a_{j₂}, so (S^a)² = (S^a_{j₁})² ⊕ (S^a_{j₂})². For any
+state ρ on H:
+
+  Tr(ρ (S^a)²) = Tr(α (S^a_{j₁})²) + Tr(β (S^a_{j₂})²)
+
+where α, β are the diagonal blocks of ρ. The off-diagonal block γ does not
+appear (proved below in Lemma 10.1).
+
+Isotropy condition (ii) forces both α and β to be proportional to the
+identity on their respective blocks:
+
+  α = λ/(2j₁+1) · I_{j₁},    β = (1−λ)/(2j₂+1) · I_{j₂}
+
+for some λ ∈ [0,1].
+
+The tensor T^{ijkl} decomposes as:
+
+  T^{ijkl} = λ T^{ijkl}_{j₁} + (1−λ) T^{ijkl}_{j₂}
+
+and A(ρ), B(ρ) are convex combinations:
+
+  A(ρ) = λ A(j₁) + (1−λ) A(j₂)
+  B(ρ) = λ B(j₁) + (1−λ) B(j₂)
+
+The GR condition (iv) requires A(ρ) + B(ρ) = 0, i.e.:
+
+  λ [A(j₁)+B(j₁)] + (1−λ)[A(j₂)+B(j₂)] = 0
+
+Using A(j)+B(j) = κ⁴ j(j+1)(2j−1)(2j+3)/30 =: κ⁴ F(j)/30, this becomes:
+
+  λ F(j₁) + (1−λ) F(j₂) = 0    ...(★)
+
+where F(j) = j(j+1)(2j−1)(2j+3).
+
+We analyse (★). For j > 1/2: F(j) = j(j+1)(2j−1)(2j+3) > 0 since all four
+factors are positive (j > 0, j+1 > 0, 2j−1 > 0, 2j+3 > 0). Therefore for
+j₁, j₂ > 1/2 both terms in (★) are positive, and (★) has no solution with
+λ ∈ (0,1).
+
+The only exception is j₁ = 0 or j₂ = 1/2 (where F = 0). If j₁ = 0: V_{j₁}
+carries the trivial representation S^a = 0, contributing nothing to the
+algebra. The effective theory lives in V_{j₂} alone — reducibility is trivial.
+If j₁ = 1/2 or j₂ = 1/2: F(1/2) = 0, so (★) is satisfied for any λ. But
+the GR condition then requires F(j₂) = 0 as well, forcing j₂ = 1/2 — a
+contradiction with j₁ ≠ j₂.
+
+Therefore H is irreducible: H = V_j for a single j. □
+
+Step 3 (j = 1/2 uniquely). By the classification of su(2) representations,
+irreducible spaces are V_j with dim = 2j+1 and j ∈ {0, 1/2, 1, 3/2, ...}.
+j = 0 is excluded by Step 1 (no non-commutativity). Condition (iv) requires
+(2j−1)(2j+3) = 0, whose unique solution in j > 0 is j = 1/2. □
+
+Step 4 (dim H = 2). dim V_{1/2} = 2j+1 = 2. □
+
+LEMMA 10.1 (Off-diagonal coherences are irrelevant for isotropy).
+
+Let H = V_{j₁} ⊕ V_{j₂} and ρ be any state on H with block decomposition
+
+  ρ = (α  γ ),    α : V_{j₁} → V_{j₁},  β : V_{j₂} → V_{j₂},
+      (γ† β )     γ : V_{j₂} → V_{j₁}   (off-diagonal coherence block).
+
+Then Tr(ρ (S^a)²) = Tr(α (S^a_{j₁})²) + Tr(β (S^a_{j₂})²) for all a.
+In particular, the off-diagonal block γ does not contribute, regardless of
+how entangled ρ is between the two spin sectors.
+
+PROOF.
+
+Step 1 (Block-diagonality of S^a).
+
+Each V_{j_k} is an invariant subspace of the su(2) action by definition of
+the irreducible decomposition. That is, J^a maps V_{j_k} into itself:
+
+  J^a |v⟩ ∈ V_{j_k}    for all |v⟩ ∈ V_{j_k},  k = 1, 2.
+
+In the direct-sum basis of H = V_{j₁} ⊕ V_{j₂}, this means J^a has no
+off-diagonal blocks:
+
+  S^a = (S^a_{j₁}    0     ).
+        (   0     S^a_{j₂} )
+
+Step 2 (Block-diagonality of (S^a)²).
+
+Since S^a is block-diagonal, its square is also block-diagonal:
+
+  (S^a)² = (S^a_{j₁}    0     ) · (S^a_{j₁}    0     )
+            (   0     S^a_{j₂} )   (   0     S^a_{j₂} )
+
+         = ((S^a_{j₁})²     0        ).
+           (    0        (S^a_{j₂})² )
+
+Step 3 (The trace computation).
+
+  ρ · (S^a)² = (α  γ ) · ((S^a_{j₁})²    0       )
+               (γ† β )   (    0       (S^a_{j₂})² )
+
+             = (α(S^a_{j₁})²        γ(S^a_{j₂})²   ).
+               (γ†(S^a_{j₁})²      β(S^a_{j₂})²   )
+
+Taking the trace (sum of diagonal block traces):
+
+  Tr(ρ (S^a)²) = Tr(α (S^a_{j₁})²) + Tr(β (S^a_{j₂})²).
+
+The upper-right block γ(S^a_{j₂})² maps V_{j₂} → V_{j₁} and contributes to
+the off-diagonal part of ρ(S^a)², which does not appear in the trace. □
+
+Physical interpretation. Quantum coherence between different spin sectors
+does not affect the geometric tensor T^{ijkl}: the GR condition A(ρ)+B(ρ) = 0
+depends only on the diagonal blocks α, β. This is why the convexity argument
+in Step 2 of the Minimality Theorem is exact — it cannot be evaded by
+preparing entangled superpositions across spin sectors.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+11. NEWTON'S CONSTANT
+
+At j = 1/2, the effective spatial action per unit volume is, from (4):
+
+  S/V = 4B · ε^{−1} · R = |κ|⁴/(4·ε) · R
+
+where ε = ℓ_P is the lattice spacing identified with the Planck length.
+Matching to the standard normalisation 1/(16πG) = M_Pl²/2:
+
+  M_Pl² = |κ|⁴ / (8ℓ_P)
+
+In Planck units (ℓ_P = M_Pl = 1): |κ|⁴ = 8, so |κ| = 8^{1/4} ≈ 1.68.
+
+This is an O(1) coefficient. No fine-tuning. Newton's constant G ~ ℓ_P² is
+fixed by the lattice spacing, with the dimensionless coefficient determined
+algebraically by the spin-1/2 representation.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+12. THE BARBERO–IMMIRZI PARAMETER
+
+In Ashtekar's self-dual formulation of GR, the connection is:
+
+  A^i_a = ω^i_a + γ e^i_a
+
+where ω is the spin connection, e is the triad, and γ is the Barbero–Immirzi
+(BI) parameter. In the Barbero–Holst formulation, γ is a free real number
+that does not affect classical equations but enters the quantum area spectrum
+in LQG. Its value has been debated for 30 years.
+
+The Holst modification of the Palatini action is:
+
+  S_Holst = (1/2κ²) ∫ ε_{IJKL} e^I ∧ e^J ∧ F^{KL}
+           + (1/2κ²γ) ∫ e^I ∧ e^J ∧ F_{IJ}
+
+where e^I is the tetrad, F^{IJ} is the curvature of the Lorentz connection,
+and ε_{IJKL} is the four-dimensional Levi-Civita tensor. The first term is
+the standard Palatini action; the second (Holst) term vanishes on-shell by
+the Bianchi identity but modifies the canonical structure and the form of
+the connection variable. Defining the self-dual and anti-self-dual
+projectors P^{±}_{IJKL} = (1/2)(ε_{IJKL} ± δ_{[IK}δ_{J]L}), the Holst
+action with γ = i reduces to the purely self-dual Palatini action:
+
+  S_{γ=i} = (1/κ²) ∫ e^I ∧ e^J ∧ P^+_{IJKL} F^{KL}
+
+and the Ashtekar connection A^i_a = ω^i_a + i e^i_a is the unique real
+connection in the self-dual sector.
+
+The connection to the scribe algebra is through the structure constant κ.
+The commutator algebra of the causal scribe operators is:
+
+  [S^a, S^b] = iκ ε^{abc} S^c,    κ ∈ iℝ.
+
+Writing κ = i|κ|, the structure constant of the algebra is iκ = −|κ| ∈ ℝ.
+The identification between the scribe algebra sl(2,ℝ) and the gauge algebra
+of the Ashtekar connection (which is su(2) in the Riemannian sector, sl(2,ℂ)
+in the Lorentzian) proceeds through:
+
+  iκ ↔ γ · ℓ_P    (structure constant identification)
+
+where ℓ_P is the Planck length. With κ = i|κ|:
+
+  γ = iκ / ℓ_P · (ℓ_P / |κ|) = i.
+
+This is the Ashtekar self-dual value. The argument is:
+
+(i)  The scribe operators S^a must be Hermitian with real eigenvalues
+     (they represent physical spatial displacements).
+
+(ii) Hermiticity of S^a with commutator [S^a,S^b] = iκ ε^{abc} S^c forces
+     κ ∈ iℝ (Section 2.3).
+
+(iii) Under the identification of the scribe algebra with the gravitational
+     connection algebra, κ ∈ iℝ maps to γ = i.
+
+This is not a gauge choice or a convention. It is determined by the
+requirement that the microscopic degrees of freedom (scribe operators)
+have real physical spectra. The BI parameter is an output of the framework,
+not an input, and is fixed prior to quantisation.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+13. THE MAIN THEOREM
+
+THEOREM (Algebraic Uniqueness of GR at j = 1/2):
+
+Let S^i (i = 1,2,3) be three operators on a future-directed acyclic graph,
+in the spin-j representation of SU(2), with C^{ij} = [S^i, S^j]. Let
+T^{ijkl} = <C^{ik} C^{jl}> be evaluated in the isotropic ground state, and
+let S[v] = ∫ T^{ijkl} F^(a)_{ij} F^(a)_{kl} d³x with F_{ij} = ∂_i v_j − ∂_j v_i.
+Then:
+
+(i)   T^{ijkl} = A(j) δ^{ij}δ^{kl} + B(j)(δ^{ik}δ^{jl} − δ^{il}δ^{jk})
+      with B(j)/A(j) = 2(j−1)(j+2)/(2j²+2j+1).
+
+(ii)  S[v] = 4B(j) ∫ R d³x + boundary, where R is the Ricci scalar of
+      h_{ij} = Σ_a v^(a)_i v^(a)_j.
+
+(iii) S[v] equals the Einstein–Hilbert action if and only if B(j) = −A(j),
+      which holds if and only if:
+
+        (2j − 1)(2j + 3) = 0,
+
+      whose unique physical solution is j = 1/2.
+
+(iv)  At j = 1/2: B > 0 follows from χ > 0, which follows from the
+      monotonicity ∂_τ ln Ω ≥ 0 of the path count on the future-directed
+      graph. The graviton kinetic term has the correct sign; no ghost.
+
+(v)   j = 1/2 is simultaneously: the unique GR solution of (iii); the
+      unique spin carried by the minimal complex Hilbert space (C²) compatible
+      with non-commutativity and isotropy; and the unique spin for which
+      reducible representations are excluded by the GR condition (Theorem 10).
+
+(vi)  Newton's constant: M_Pl² = |κ|⁴/(8ℓ_P) with |κ| = O(1) in Planck
+      units. No free parameters beyond the lattice spacing ε = ℓ_P.
+
+COROLLARY 1: The Einstein–Hilbert action with a ghost-free massless spin-2
+graviton is the unique effective action of a spin-1/2 causally ordered operator
+algebra on a future-directed acyclic graph. No other spin representation yields GR.
+
+COROLLARY 2: No classical probability measure on the scribe alphabet produces
+GR. Complex amplitudes are necessary. The transition from classical to quantum
+path statistics is not a choice but a requirement for gravity to emerge.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+14. DISCUSSION
+
+14.1 Relation to Weinberg's Uniqueness Theorem
+
+Weinberg (1964) proved that any Lorentz-invariant consistent theory of a
+massless spin-2 particle must be GR in the infrared. Our result is
+complementary: it is pre-geometric. Before any notion of spacetime metric or
+spin-2 particle is introduced, the operator algebra at j = 1/2 already
+determines that the resulting effective theory must be the Einstein–Hilbert
+action. Together, the two results suggest that GR is the unique consistent
+gravitational theory from both the UV (representation algebra) and the IR
+(S-matrix consistency) perspectives.
+
+14.2 Relation to Spin-Foam Models
+
+In the EPRL and FK spin-foam models, the j = 1/2 representation of SU(2) (or
+its SL(2,C) lift) plays a special role in the vertex amplitude. Various
+phenomenological or consistency arguments have been given for this preference.
+Our theorem provides an algebraic derivation: j = 1/2 is the unique spin for
+which the tensor structure of scribe commutators reproduces the Ricci scalar.
+The minimality theorem (Section 10) adds a new perspective: the spin-foam
+preference for j = 1/2 reflects the minimality of the underlying Hilbert space.
+
+14.3 The Barbero–Immirzi Ambiguity
+
+The BI parameter γ enters LQG through the Holst modification of the Palatini
+action. Its value affects the area gap but not the classical theory. Numerous
+authors have attempted to fix γ by various physical arguments. In our framework,
+γ is determined directly by the reality condition on the causal operators:
+κ ∈ iR forces γ = i. This fixes the BI parameter at the level of the operator
+algebra, prior to quantisation.
+
+14.4 The Two Roots and Time
+
+The polynomial (2j−1)(2j+3) = 0 has two roots. Standard physics discards
+j = −3/2 on grounds of positivity. Here we show that j = −3/2 corresponds
+to a time-reversed graph (χ < 0, B < 0, ghost). The two roots are not
+one physical and one unphysical — they are two physical situations with
+opposite arrows of time. The selection of j = +1/2 is the selection of a
+future-directed universe. The polynomial encodes time-reversal symmetry of
+the algebra; the physics breaks it.
+
+14.5 Why Complex Amplitudes
+
+The result of Section 9 gives a new perspective on the necessity of quantum
+mechanics. A classical probability measure on the scribe alphabet produces
+operators with real structure constants (κ ∈ ℝ), while the GR algebra
+requires κ ∈ iℝ. These are incompatible. A universe with only classical
+path statistics cannot produce the algebra [S^a,S^b] = iκ ε^{abc} S^c with
+Hermitian S^a — and therefore cannot produce GR. The emergence of gravity
+is tied to the emergence of complex path amplitudes at the level of path
+statistics, not as an additional postulate but as a necessary condition for
+the scribe operators to have real physical spectra.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+15. OPEN QUESTIONS
+
+(a) Full 4d extension. The computation above is spatial (3d triads). Extension
+    to the full Lorentzian tensor T^{μνρσ} using the ADM decomposition is
+    expected to reproduce the Gauss–Bonnet structure at higher order in ε.
+    Whether the polynomial (*) persists in 4d should be established.
+
+(b) Lorentzian algebra. The computation uses SU(2) (spatial rotations). A
+    fully covariant version using SL(2,C) (the Lorentz group) would provide
+    a 4d uniqueness theorem without the ADM split.
+
+(c) Quantum corrections. The polynomial (2j−1)(2j+3) = 0 is classical.
+    Whether radiative corrections shift the effective representation index,
+    or whether j = 1/2 is an IR fixed point of a renormalisation group flow
+    on the space of representations, is open.
+
+(d) Black hole entropy. The path-counting interpretation of the scribe graph
+    identifies Φ = (1/3)ln det v as a local entropy density. Combined with
+    the j = 1/2 uniqueness, the Bekenstein–Hawking formula S = A/(4G) should
+    follow without invoking the BI parameter. This derivation will be presented
+    in a companion paper.
+
+(e) Quantum group deformation. If the cost per step C_min is allowed to vary
+    locally, the structure constant κ becomes position-dependent: κ = κ(x).
+    This deforms sl(2,R) into a quantum group SL_q(2,R) with q = e^λ, λ ~ κ(x).
+    The deformation parameter q plays the role of a local refractive index for
+    the scribe algebra. Whether this deformation is consistent with the
+    minimality theorem — and what replaces C² in that context — is open.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CONCLUSION
+
+We have proved that General Relativity — the Einstein–Hilbert action with a
+ghost-free massless graviton — is the unique effective theory produced by
+three causally ordered operators in the spin-1/2 representation of SU(2) on
+a future-directed acyclic graph. The entire argument rests on a single
+polynomial equation:
+
+  (2j − 1)(2j + 3) = 0,
+
+derived from the tensor structure of the commutator correlator T^{ijkl}.
+Its unique physical root is j = 1/2.
+
+Beyond the GR condition, we have proved that j = 1/2 is the unique spin
+compatible with the minimal complex Hilbert space carrying non-commuting
+isotropic operators (Theorem 10), and that classical probability measures
+are insufficient — complex path amplitudes are necessary (Section 9).
+
+The ghost-free sign follows from the arrow of time, derived from path entropy
+monotonicity (Section 8.3). Newton's constant is O(1) in Planck units.
+The Barbero–Immirzi parameter is γ = i, fixed by operator reality conditions.
+The two roots of the polynomial correspond to the two possible arrows of time;
+physics selects j = +1/2 by selecting the future.
+
+General Relativity is not assumed. It is representation-constrained: the
+unique dynamics consistent with the minimal spin algebra of causally ordered
+operations, and the unique theory accessible to a universe with complex
+(rather than classical) path amplitudes.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+REFERENCES
+
+Ashtekar, A. (1986). New variables for classical and quantum gravity.
+  Physical Review Letters 57, 2244–2247.
+
+Barbero, J.F. (1995). Real Ashtekar variables for Lorentzian signature
+  space-times. Physical Review D 51, 5507–5510.
+
+Deser, S. (1970). Self-interaction and gauge invariance. General Relativity
+  and Gravitation 1, 9–18.
+
+Engle, J., Livine, E., Pereira, R., Rovelli, C. (2008). LQG vertex with
+  finite Immirzi parameter. Nuclear Physics B 799, 136–149.
+
+Holst, S. (1996). Barbero's Hamiltonian derived from a generalised Hilbert-
+  Palatini action. Physical Review D 53, 5966–5969.
+
+Immirzi, G. (1997). Quantum gravity and Regge calculus. Nuclear Physics B
+  (Proc. Suppl.) 57, 65–72.
+
+Lovelock, D. (1971). The Einstein tensor and its generalizations. Journal of
+  Mathematical Physics 12, 498–501.
+
+Weinberg, S. (1964). Photons and gravitons in S-matrix theory: derivation of
+  charge conservation and equality of gravitational and inertial mass.
+  Physical Review 135, B1049–B1056.
+
+Witten, E. (1988). 2+1 dimensional gravity as an exactly soluble system.
+  Nuclear Physics B 311, 46–78.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

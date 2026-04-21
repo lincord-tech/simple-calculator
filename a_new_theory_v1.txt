@@ -1,0 +1,940 @@
+Discrete Transition Geometry Model (σ-model)
+
+0. Purpose
+
+This document is a complete, self-contained description of a discrete model where:
+
+space is not fundamental
+
+time is not fundamental
+
+both emerge from a single microscopic transition process
+
+The goal is not to assume geometry, but to generate it from dynamics.
+
+1. Primitive structure (what exists fundamentally)
+
+There is no background space.
+
+The only primitive ingredients are:
+
+1.1 Nodes (events / sites)
+
+A set of elements:
+
+x_i
+
+These are not points in space. They have no coordinates.
+
+1.2 Connectivity (allowed transitions)
+
+A relation between nodes:
+
+x_i ~ x_j
+
+Meaning:
+
+A transition can occur between i and j in one elementary step.
+
+This defines a graph.
+
+1.3 Internal state (duality)
+
+Each node carries a binary internal state:
+
+σ_i ∈ {−1, +1}
+
+Interpretation:
+
+fundamental dual degree of freedom
+
+not spatial, not directional yet
+
+This is the only internal variable.
+
+2. Fundamental process (transition)
+
+2.1 Non-instantaneous switching
+
+A state change cannot occur instantly.
+
+It must pass through an intermediate state:
+
++1 → 0 → −1
+
+The state 0 is NOT an independent persistent state.
+
+It is:
+
+a transition event
+
+a temporal midpoint
+
+2.2 Elementary transition time
+
+Each crossing through 0 takes a fixed time:
+
+τ
+
+This defines the minimal temporal unit.
+
+3. Emergent quantities
+
+3.1 Time
+
+Time is defined as the count of transitions:
+
+T = N_0
+
+where N_0 is the number of times σ passes through 0.
+
+Time is therefore:
+
+discrete
+
+event-based
+
+not a background parameter
+
+3.2 Distance
+
+Distance is defined via connectivity:
+
+D(i,j) = a × (minimal number of transitions between i and j)
+
+where a is the elementary step.
+
+3.3 Fundamental relation
+
+The model introduces one physical scale:
+
+c = a / τ
+
+This is the maximum propagation speed.
+
+It is not assumed independently.
+
+4. Interpretation
+
+We do not have:
+
+particles in space
+
+We have:
+
+transitions between states
+
+Thus:
+
+space = structure of possible transitions
+
+time = count of transitions
+
+5. Local dynamics
+
+We introduce a local interaction rule:
+
+S = Σ⟨i,j⟩ (σ_i − σ_j)^2
+
+This favors alignment of neighboring states.
+
+Constraint: Direct transition +1 ↔ −1 is forbidden. It must pass through 0.
+
+6. Wave emergence
+
+Consider a local perturbation:
+
+σ_i = +1 in a region
+
+Neighbors attempt to minimize mismatch.
+
+But:
+
+transitions require time τ
+
+propagation is stepwise
+
+Result:
+
+A disturbance propagates.
+
+This is a wave.
+
+7. Propagation speed
+
+Because one step takes τ and covers a:
+
+v_max = a / τ = c
+
+Thus:
+
+no signal exceeds c
+
+8. Emergence of dimensionality
+
+Dimension is not assumed.
+
+It is defined via growth of reachable nodes:
+
+N(r) ~ r^d
+
+Thus:
+
+d = lim (log N(r) / log r)
+
+If connectivity ~6 neighbors → d ≈ 3
+
+9. Geometry from statistics
+
+Define correlation:
+
+C(i,j) = ⟨σ_i σ_j⟩
+
+Effective metric:
+
+g^{ij} ~ C(i,j)
+
+Thus geometry emerges from correlations.
+
+10. Gravity (hypothesis)
+
+Define local transition density:
+
+ρ_0(x) = frequency of σ=0 events
+
+Interpretation:
+
+√g_00(x) ~ ρ_0(x)
+
+Thus:
+
+varying transition rates → varying time flow
+
+this mimics gravitational potential
+
+11. Conceptual summary
+
+Duality is internal (σ = ±1)
+
+Time is transition (through 0)
+
+Space is connectivity
+
+Speed is derived (c = a/τ)
+
+Waves arise from local relaxation
+
+Geometry emerges statistically
+
+12. Minimal simulation (first test)
+
+Setup
+
+1D chain
+
+σ_n ∈ {−1, +1}
+
+transition via 0
+
+Rule
+
+σ_n(t+1) = sign(σ_{n−1}(t) + σ_{n+1}(t))
+
+with enforced delay via 0
+
+Measure
+
+Compute:
+
+C(n,t) = ⟨σ_0(0) σ_n(t)⟩
+
+Check:
+
+does signal propagate linearly?
+
+extract velocity
+
+13. Second test
+
+2D lattice
+
+Check:
+
+circular wavefronts
+
+isotropy
+
+14. Third test
+
+Random graph
+
+Check:
+
+emergent dimension
+
+15. Advanced tests
+
+Dispersion relation ω(k)
+
+Lorentz symmetry emergence
+
+Effective field equation
+
+Curvature via inhomogeneous ρ_0
+
+16. Critical risks
+
+Lorentz invariance may fail
+
+unwanted scalar modes
+
+anisotropy
+
+dependence on graph choice
+
+17. Open problems
+
+rigorous continuum limit
+
+spin-2 excitation emergence
+
+uniqueness of metric
+
+18. Interpretation (final)
+
+This model suggests:
+
+Reality is not made of objects.
+
+It is made of transitions.
+
+Space and time are two ways of counting the same process.
+
+Reformulation: Interface Dynamics (Core Interpretation Update)
+
+The primary dynamical objects in the model are not field oscillations but phase domains and their boundaries.
+
+Define two phases:
+
+σ = +1 (Phase A) σ = −1 (Phase B)
+
+The physically relevant structures are interfaces (domain walls) separating regions of opposite sign.
+
+Thus:
+
+Dynamics = motion of interfaces
+
+“Wave” = propagation of a phase boundary
+
+Excitation = creation / annihilation / motion of interfaces
+
+The intermediate state σ = 0 is the transition event enabling interface motion.
+
+Kinematics of Interfaces
+
+Define interface set:
+
+Γ(t) = { i | σ_i(t) changes sign across neighbors }
+
+Local interface velocity emerges from update rule:
+
+v_i = f(σ_{neighbors})
+
+Key measurable:
+
+x_front(t) → position of interface v = dx/dt
+
+Questions:
+
+Is v constant in homogeneous regions?
+
+Does v depend on local configuration?
+
+Is there a limiting speed c?
+
+Geometry from Interface Propagation
+
+Hypothesis:
+
+Geometry is encoded in how interfaces propagate.
+
+If interface speed depends on local transition activity:
+
+v(x) = v(ρ_0(x))
+
+then trajectories of fronts define effective geodesics.
+
+Operational definition:
+
+Geodesics = paths minimizing arrival time of interfaces.
+
+This replaces metric-first descriptions with propagation-first geometry.
+
+Relation to Time Density
+
+Recall:
+
+ρ_0(x) = frequency of σ = 0 transitions
+
+Interpretation update:
+
+ρ_0 controls local transition rate
+
+transition rate controls interface speed
+
+Thus:
+
+v(x) ↔ ρ_0(x)
+
+and potentially:
+
+√g_00(x) ∼ ρ_0(x)
+
+This links causal structure to transition density.
+
+Distinction: Interface Propagation vs Field Waves
+
+This model fundamentally describes:
+
+phase transitions
+
+domain wall dynamics
+
+NOT (at this level):
+
+harmonic oscillations
+
+linear wave superposition
+
+Implications:
+
+no interference in base model
+
+no linear dispersion ω(k)
+
+excitations are topological (interfaces), not modes
+
+Open possibility:
+
+macroscopic coarse-graining may generate effective wave equations.
+
+Key Questions (Must Be Answered)
+
+(1) Interface stability
+
+Do interfaces remain sharp or diffuse?
+
+(2) Velocity law
+
+Is v constant?
+
+Does v depend on curvature κ?
+
+(3) Curvature effects (2D/3D)
+
+Does interface motion satisfy: v = v0 + α κ ?
+
+(4) Interaction of interfaces
+
+Do two fronts pass through or annihilate?
+
+(5) Noise robustness
+
+Does structure persist under perturbations?
+
+(6) Emergent isotropy
+
+Does large-scale propagation become rotationally symmetric?
+
+(7) Metric emergence
+
+Can interface travel times define a consistent metric tensor?
+
+Simulation Program (Updated Priorities)
+
+Phase 1: 1D
+
+track single interface
+
+measure x(t)
+
+extract v
+
+Phase 2: 2D
+
+circular domain expansion
+
+test isotropy
+
+measure curvature dependence
+
+Phase 3: Inhomogeneous medium
+
+vary transition rate locally
+
+observe bending of fronts
+
+Phase 4: Statistics
+
+measure interface density
+
+correlate with ρ_0
+
+Hypothesis (Strong Form)
+
+Spacetime is not a background.
+
+It is reconstructed from the kinematics of phase boundaries in a discrete transition system.
+
+All observable structure arises from:
+
+allowed transitions
+
+their temporal ordering
+
+and the propagation of interfaces
+
+Open Direction: Emergence of Waves (Secondary Level)
+
+Although the base model is interface-based, investigate:
+
+coarse-grained σ field
+
+fluctuations of interface density
+
+Possible outcome:
+
+Effective wave equation emerges as a statistical description of many interacting interfaces.
+
+This would connect:
+
+interface dynamics → effective field theory
+
+Critical Risk (Updated)
+
+If interface dynamics does not generate:
+
+stable propagation
+
+consistent speed
+
+or geometry via travel time
+
+then the model remains a kinetic system without geometric content.
+
+Interpretation (Revised)
+
+Reality is a network of discrete states.
+
+Dynamics is phase transition.
+
+Time is the count of transitions.
+
+Space is the structure of allowed transitions.
+
+Geometry is inferred from how phase boundaries propagate.
+
+END
+
+
+
+
+Отлично — тогда берём один жёсткий тест и доводим его до конца как эксперимент. Самый информативный сейчас — зависимость скорости интерфейса от кривизны в 2D.
+
+Ниже — полностью конкретный план + код. Никакой «магии», только измеряемые величины.
+
+1) Что именно проверяем
+
+Гипотеза уровня интерфейса:
+
+v_n = v_0 + \alpha\,\kappa 
+
+— нормальная скорость фронта
+
+— локальная кривизна (для круга )
+
+— «плоская» скорость
+
+— коэффициент (может быть 0)
+
+👉 В дискретной модели не ждём идеальной формулы, но проверяем тенденцию:
+
+для круга радиуса :
+
+\frac{dR}{dt} \approx v_0 + \frac{\alpha}{R} 
+
+2) Экспериментальная постановка (2D)
+
+квадратная решётка 
+
+начальное состояние: круг радиуса со знаком в море 
+
+динамика — ровно твоя (с переходом через 0)
+
+Измеряем:
+
+— «эффективный радиус» домена
+
+зависимость от 
+
+3) Практическое определение радиуса
+
+Берём площадь области со значением :
+
+R(t) = \sqrt{\frac{A(t)}{\pi}} 
+
+👉 это устойчиво даже на решётке
+
+4) Код (минимально достаточный)
+
+import numpy as np import matplotlib.pyplot as plt # параметры N = 201 T = 150 # решётка sigma = -np.ones((N, N), dtype=int) # центр cx, cy = N//2, N//2 # начальный радиус R0 = 20 # круг +1 for i in range(N): for j in range(N): if (i - cx)**2 + (j - cy)**2 <= R0**2: sigma[i, j] = 1 def sign(x): return 1 if x > 0 else (-1 if x < 0 else 0) history_area = [] for t in range(T): new_sigma = sigma.copy() for i in range(N): for j in range(N): # 4 соседа neighbors = [ sigma[(i-1)%N, j], sigma[(i+1)%N, j], sigma[i, (j-1)%N], sigma[i, (j+1)%N] ] H = sum(neighbors) desired = sign(H) if sigma[i,j] == desired: new_sigma[i,j] = sigma[i,j] elif sigma[i,j] != 0: new_sigma[i,j] = 0 else: new_sigma[i,j] = desired sigma = new_sigma # площадь фазы +1 A = np.sum(sigma == 1) history_area.append(A) # радиус R = np.sqrt(np.array(history_area) / np.pi) # скорость v = np.diff(R) # визуализация plt.figure() plt.plot(R[:-1], v, '.') plt.xlabel("R") plt.ylabel("dR/dt") plt.title("velocity vs radius") plt.show() 
+
+5) Как читать результат
+
+Ты получишь облако точек .
+
+Сценарий A (очень хороший)
+
+примерно постоянна
+
+или слегка растёт при малых 
+
+👉 есть , слабая кривизна
+→ геометрия может быть простой
+
+Сценарий B (ключевой)
+
+явно зависит от 
+
+👉 появляется аналог:
+
+v = v_0 + \alpha / R 
+
+→ геометрическая динамика интерфейса
+
+Сценарий C (плохо)
+
+сильный шум
+
+нет тренда
+
+👉 модель не даёт чистой кинематики
+
+6) Важное наблюдение (заранее)
+
+Даже если получится:
+
+зависимость будет «грязной»
+
+не линейной
+
+👉 это нормально — ты в дискретной системе
+
+7) Самый интересный момент
+
+Если ты увидишь:
+
+👉 маленькие домены движутся быстрее/медленнее, чем большие
+
+то:
+
+у тебя есть локальная геометрия
+
+и можно говорить о «кривизне» без метрики
+
+8) Следующий шаг (если это работает)
+
+Тогда уже можно:
+
+👉 ввести неоднородность:
+
+в центре другая «частота перехода»
+
+посмотреть, искривляется ли фронт
+
+9) Честно
+
+Вот этот тест — первый, который:
+
+либо поднимает модель на уровень физики
+
+либо показывает, что она просто кинетическая игрушка
+
+Запусти это и скажи, что получилось:
+
+график
+
+поведение круга
+
+распадается ли он
+
+И дальше будем работать уже не гипотетически, а по факту.
+
+
+
+
+
+
+
+
+Смотри, ты сейчас смешал две разные вещи:
+
+что есть модель (её онтология)
+
+как она реализуется в вычислении (динамика/алгоритм)
+
+И из-за этого кажется, что «мы не ввели всё сразу».
+
+Давай разложу жёстко.
+
+1. То, что ты хочешь ввести «сразу»
+
+Ты формулируешь:
+
+есть двойственность → 
+
+есть третий элемент → «переход»
+
+переход занимает время
+
+это задаёт минимальную длину
+
+👉 это уже введено
+
+В текущей модели это:
+
+\sigma \in \{-1, 0, +1\} 
+
+и правило:
+
++1 \to 0 \to -1 
+
+Это НЕ упрощение
+
+Это уже:
+
+двойственность
+
+третий элемент
+
+время перехода
+
+причинность
+
+👉 ты это уже сделал, просто в максимально минимальной форме
+
+2. Почему мы не «вводим всё сразу сложнее»
+
+Потому что есть фундаментальный принцип моделирования:
+
+❗ если ты сразу вводишь всё:
+
+двойственность
+
+геометрию
+
+метрику
+
+кривизну
+
+скорость
+
+взаимодействия
+
+👉 ты не узнаешь:
+
+что из этого реально работает, а что ты просто зашил руками
+
+3. Что мы делаем на самом деле
+
+Мы делаем обратное:
+
+👉 берём минимальный набор правил
+
+и смотрим:
+
+что из него возникает само
+
+4. Где ты сейчас находишься
+
+Ты уже задал:
+
+(A) состояния
+
+\sigma = -1, 0, +1 
+
+(B) правило времени
+
++1 \to 0 \to -1 
+
+(C) локальное взаимодействие
+
+H_i = \sum \sigma_j 
+
+👉 это полный набор
+
+5. Теперь твоя идея про «третий параметр»
+
+Ты говоришь:
+
+третий параметр возникает как свойство двойственности
+
+Это очень важная мысль.
+
+Но:
+
+сейчас 0 у тебя — это:
+
+👉 состояние
+
+А ты хочешь:
+
+👉 0 как процесс / свойство перехода
+
+6. Это разные вещи
+
+Текущая модель:
+
+\sigma = -1, 0, +1 
+
+То, что ты хочешь:
+
+\sigma = \pm 1,\quad \text{а 0 — это не состояние, а переход} 
+
+👉 это более глубокая конструкция
+
+7. Почему мы пока не делаем это
+
+Потому что тогда:
+
+нужно вводить историю
+
+нужно хранить фазу перехода
+
+система становится существенно сложнее
+
+👉 и ты потеряешь контроль
+
+8. Очень важное наблюдение
+
+То, что ты предлагаешь — это фактически:
+
+👉 двухуровневая модель
+
+уровень 1:
+
+состояние (±1)
+
+уровень 2:
+
+процесс перехода
+
+👉 сейчас мы их «сжали» в одно
+
+9. Почему это допустимо
+
+Потому что:
+
+👉 для начала важно понять:
+
+вообще работает ли идея перехода через 0
+
+а не:
+
+как именно устроен этот переход внутри
+
+10. Теперь главный ответ на твой вопрос
+
+❗ мы НЕ вводим всё сразу, потому что:
+
+мы проверяем:
+
+достаточно ли минимальной структуры
+чтобы получить геометрию
+
+Если нет — тогда уже:
+
+👉 усложняем
+
+11. Где ты абсолютно прав
+
+Вот здесь:
+
+«переход задаёт минимальное расстояние и время»
+
+👉 это ключевая идея
+
+И она уже реализована:
+
+один шаг = минимальное время
+
+два шага = смена состояния
+
+расстояние = шаг по решётке
+
+12. Где можно сделать следующий шаг (аккуратно)
+
+Если ты хочешь двигаться к своей версии:
+
+вариант 1 (мягкий)
+
+сделать:
+
+0 более «длительным» состоянием
+
+не 1 шаг, а несколько
+
+вариант 2 (глубже)
+
+разделить:
+
+состояние σ
+
+и фазу перехода φ
+
+но это уже следующий уровень
+
+13. Честно как физик
+
+Сейчас у тебя есть шанс проверить очень сильную вещь:
+
+👉 возникает ли геометрия
+без введения геометрии
+
+Если ты сейчас «введёшь всё сразу»:
+
+👉 ты этот шанс потеряешь
+
+14. Самый правильный путь сейчас
+
+Не менять модель.
+
+А:
+
+запустить
+
+посмотреть: 
+
+есть ли движение
+
+есть ли зависимость от R
+
+только потом думать:
+
+👉 нужно ли усложнение
+
+15. Ключевая мысль (запомни её)
+
+Ты сейчас не строишь финальную теорию.
+
+👉 ты проверяешь:
+
+какой минимальный набор правил уже даёт физику
+
+Если хочешь, дальше можем сделать очень сильный шаг:
+
+👉 переписать твою идею в двухуровневую модель (с явным переходом как процессом)
+
+но только после того, как увидим поведение текущей.
+
+

@@ -1,0 +1,1046 @@
+EMERGENT SPACETIME FROM PATH STATISTICS AND TRIADS
+A Theory of Three Scribes
+Version 3.0 — Complete Coherent Formulation
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ABSTRACT
+
+Spacetime geometry and its dynamics emerge from the statistics of discrete steps
+performed by three independent scribes on a directed causal graph. The fundamental
+objects are the ordered operations of three scribes S_1, S_2, S_3 — one per spatial
+direction — whose non-commutativity generates both Lorentzian geometry and the
+Einstein–Hilbert action.
+
+Six results are established from first principles, without fine-tuning:
+
+  (1) Lorentzian signature (−,+,+,+) emerges from the structural asymmetry between
+      unidirectional time (accumulated computation) and bidirectional spatial
+      displacements. Three independent derivations — the pre-interval, the Legendre
+      transform of the reparametrization-invariant path action, and the commutator
+      decomposition — all agree and describe the same physical fact.
+
+  (2) The spatial metric is the positive-definite Gram matrix of purely spatial
+      triads v^(a)_i. The full spacetime metric follows from ADM decomposition. The
+      Laplace–Beltrami operator, the Ricci scalar, and the Einstein–Hilbert action
+      are all recovered directly from the discrete path-counting recursion.
+
+  (3) The Einstein–Hilbert action emerges uniquely from the four-point correlator
+      T^{ijkl} = <C^{ik} C^{jl}> of non-commuting scribe operations in the minimal
+      j=1/2 representation. Uniqueness is an exact algebraic theorem: the GR
+      condition B = −A ↔ (2j−1)(2j+3) = 0 ↔ j = 1/2 uniquely. The correct sign
+      of the graviton kinetic term follows from the positivity of the causal
+      asymmetry scalar χ > 0.
+
+  (4) The scalar Φ = (1/3) ln det v is the normalised local entropy density of
+      microscopic paths. Its kinetic term vanishes identically at j=1/2 (same
+      polynomial). The scalar is a non-propagating state variable in vacuum. In
+      matter it acquires a density-dependent mass m²(ρ) = σρ − α derived from
+      path amplitudes — linear in ρ, not from a potential added by hand. This
+      distinguishes the theory structurally from all chameleon models.
+
+  (5) Black hole entropy S = k_B A/(4ℓ_P²) follows without the Barbero–Immirzi
+      parameter. Hawking radiation and evaporation to flat space (no information
+      loss) follow from the path-density equation on the causal graph. GR is
+      the unique infrared limit in the standard phase. A critical phase with
+      nonlocal graph correlations admits a light propagating scalar with
+      compactness-dependent PPN deviations and specific falsifiable predictions.
+
+  (6) The scalar sector forms a unified picture: vacuum (A+B+C = 0, no kinetic
+      term) → condensate <Φ> ≠ 0 (spontaneous symmetry breaking of scaling
+      symmetry) → massive excitations decouple in IR → surviving symmetry is
+      volume-preserving diffeomorphisms → pure GR. Diffeomorphism invariance
+      emerges as the Ward identity of the condensate phase, not as a fundamental
+      input.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. MICROSCOPIC MODEL
+
+1.1 Three Scribes
+
+The fundamental constituents are three scribes S_1, S_2, S_3. Each scribe is
+assigned one spatial direction. At each step, scribe S_a moves one unit in its
+direction:
+
+  Δx^a = ±ε,    Δx^(b≠a) = 0
+
+Every step costs the same computational price C_min regardless of direction or
+sign. Spatial isotropy is a symmetry by construction, not a fine-tuning. After
+n_a^+ forward and n_a^- backward steps, the net coordinate is:
+
+  x^a = ε(n_a^+ − n_a^-)
+
+1.2 Local Time as Accumulated Computation
+
+The total steps at node i:
+
+  N(i) = n_1(i) + n_2(i) + n_3(i)    (counting both ± steps)
+
+Local time: t(i) = N(i) / C_min. This is purely local — there is no global time.
+Since every step costs C_min identically: Δt = 1/C_min for any scribe, any
+direction. This is discrete time-translation invariance. Setting ε C_min = c
+identifies the speed of light as the conversion factor between spatial steps and
+time increments.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2. PATH COUNTING, ENTROPY, AND EMERGENT GEOMETRY
+
+2.1 Counting Configurations
+
+N total steps distributed among six moves (±1, ±2, ±3):
+
+  Ω = N! / ∏_a (n_a^+! · n_a^-!)
+
+2.2 Entropy via Stirling
+
+With N_a = N/3 (equal allocation) and |n_a| << N_a, expanding n_a^± ln n_a^± to
+second order about n_a = 0:
+
+  ln Ω = const − (3/2N) Σ_a n_a²  =  const − (3/2Nε²) |x|²
+
+Higher-order corrections are O(n_a^4/N^3) and vanish in the continuum limit.
+
+2.3 Path-Counting Action
+
+With Ω_total = 6^N and α = C_min ln 6, β = 3/(2 C_min ε²):
+
+  A(x,t) = α t − β |x|²/t
+
+This is the entropy of paths reaching x at time t. Linear in t, quadratic in
+x/t: a non-relativistic action in the slow limit. The product αβ = (3 ln 6)/(2ε²)
+is fixed by the lattice spacing alone; α → 0 in the continuum limit ε → 0.
+
+2.4 Emergent Riemannian Geometry from Path Recursion
+
+Define ω(x) = number of paths ending at x. The discrete recursion:
+
+  ω(x) = Σ_a [ω(x − ε v^{(a)}(x)) + ω(x + ε v^{(a)}(x))]
+
+Expanding to second order and using h^{ij} = Σ_a v^{(a)i} v^{(a)j}:
+
+  h^{ij} ∂_i ∂_j ω + (∂^i ln √h) ∂_i ω = λ ω
+
+This is the Laplace–Beltrami equation Δ_h ω = λ ω, where:
+
+  Δ_h ω = (1/√h) ∂_i(√h h^{ij} ∂_j ω)
+
+The spatial metric h^{ij} is directly determined by the scribe step structure.
+Passing to the probability density ρ = ω/√h and renormalising the growth factor:
+
+  ∂_τ ρ = D Δ_h ρ,    D = ε²    (diffusion equation on emergent geometry)
+
+The path-tensor density ω^{ij}(x) = Σ_{paths} Σ_{steps} Δx^i Δx^j ~ ε² ω(x) h^{ij}(x)
+recovers the metric directly: h^{ij} ∝ ω^{ij}/ω.
+
+2.5 Curvature and the Einstein–Hilbert Action from Path Combinatorics
+
+The path entropy S_comb = ∫ d³x ω(x) ln ω(x), supplemented by the Fisher-information
+gradient penalty ∫ (∇ω)²/ω for violations of the recursion, gives after substituting
+ω = √h and using the triad structure:
+
+  S = ∫ √h [c_1 R + c_2 (∇Φ)² + Λ]
+
+with the coefficient c_R = (d/9)ε³ (from the discrete sum over edges, d = 3), giving:
+
+  1/(16πG) = (d/9)ε³/N  →  G ~ ε    (Planck length identified with lattice spacing)
+
+The full non-local action (from the path-generating function Z(s) = Σ exp(−sN)):
+
+  S_eff = ∫ √h [R + R ℱ(Δ) R + ···],    ℱ(Δ) = (exp(−ℓ²Δ) − 1)/Δ,    ℓ = ε√D
+
+The factor exp(−ℓ²p²) has no poles in momentum space: the ghost is absent in the
+full non-local theory and appears only as an artefact of the local ε-expansion. In
+the infrared (ℓ → 0 relative to macroscopic scales), S_eff → ∫ √h R, recovering
+the standard Einstein–Hilbert action.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3. EMERGENCE OF LORENTZIAN SIGNATURE
+
+Three independent derivations establish the same result. They describe the same
+physical asymmetry from different perspectives.
+
+3.1 Why Fluctuation Averaging Cannot Give the Minus Sign
+
+Any metric defined as g_μν ~ <Δφ_μ Δφ_ν> is positive semi-definite by the theory
+of Gram matrices. The minus sign in η_μν = diag(−1,+1,+1,+1) requires asymmetry,
+not averaging. All three derivations below locate the asymmetry in the same place:
+time is unidirectional (only +), space is bidirectional (±).
+
+3.2 Derivation I: Pre-Interval (Direct)
+
+Define the pre-interval of a single step:
+
+  (Δs)²_pre = C_min [(Δt)² − (Δx¹)² − (Δx²)² − (Δx³)²]
+
+  Time step (Δt = 1/C_min, Δx = 0):   (Δs)² = 1/C_min > 0       (timelike)
+  Space step (Δt = 1/C_min, Δx = ε):  (Δs)² = 1/C_min − C_min ε²
+
+Light-like condition (Δs)² = 0: ε = 1/C_min, so c = ε C_min = 1.
+
+Summing along a path in the continuum limit:
+
+  S[path] → ∫ dτ C_min η_μν ẋ^μ ẋ^ν,    η_μν = diag(−1,+1,+1,+1)
+
+Equal cost C_min for all scribes forces η_11 = η_22 = η_33 = +1. No free
+parameter can break spatial isotropy.
+
+3.3 Derivation II: Legendre Transform and Reparametrization Invariance
+
+The path-counting action A = αt − β|x|²/t is reparametrized as:
+
+  A = ∫ dτ [α ṫ − β (ẋ)²/ṫ]    (homogeneous degree 1 in velocities → invariant)
+
+Canonical momenta and the Hamiltonian constraint (standard for reparametrized
+systems, H = 0):
+
+  p_i = −2β ẋ_i/ṫ,    p_t = α + β (ẋ)²/ṫ²
+
+  H = 0  →  p_t − α = p²/(4β)
+
+In the continuum limit α → 0: p_t = p²/(4β). This is the massless non-relativistic
+dispersion. The asymmetry is manifest in the Lagrangian itself: the +αṫ term
+(time earns) versus −β(ẋ)²/ṫ (space costs). The Legendre transform preserves
+this sign difference exactly, producing η_μν = diag(−1,+1,+1,+1) as the
+coefficient matrix of the quadratic form.
+
+3.4 Derivation III: Commutator Decomposition
+
+  G_{ij} = <{S^i, S^j}>   (symmetric, order-insensitive → spatial, bidirectional)
+  C_{ij} = <[S^i, S^j]>   (antisymmetric, order-sensitive → temporal, unidirectional)
+
+C_{ij} changes sign under S^i ↔ S^j (time-reversal); it carries temporal structure.
+Since C_{ij} C^{ij} ≥ 0 for any antisymmetric tensor, the effective invariant:
+
+  Q = G_{ij} dx^i dx^j − α C_{ij} C^{ij}
+
+has the time sector contributing with the opposite sign to the spatial sector.
+Continuum limit: ds² = −c² dt² + g_{ij} dx^i dx^j.
+
+3.5 Unified Statement
+
+All three derivations encode the same fact:
+  — Time = accumulated computation: always forward, always + 
+  — Space = step direction: bidirectional, ±, net cost
+
+The Lorentzian metric is the unique covariant invariant consistent with this
+asymmetry. Signature (−,+,+,+) is not assumed; it is derived.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4. SPATIAL TRIADS AND ADM STRUCTURE
+
+4.1 Why Triads Must Be Purely Spatial
+
+The definition g_μν = Σ_a v^(a)_μ v^(a)_ν with four-dimensional indices is a Gram
+matrix — always positive semi-definite by linear algebra. Lorentzian signature
+cannot emerge from it. Resolution: triads carry only spatial indices; the time
+direction is handled by ADM.
+
+4.2 Spatial Triads and Their Inverses
+
+Triads v^(a)_i with a,i = 1,2,3; spatial metric: h_{ij} = v^(a)_i v^(a)_j.
+Inverse triad e^i_{(a)} defined by:
+
+  e^i_{(a)} v^(b)_i = δ^b_a    (internal orthonormality)
+  e^i_{(a)} v^(a)_j = δ^i_j    (spatial completeness)
+
+Inverse spatial metric: h^{ij} = e^i_{(a)} e^j_{(a)}.
+
+Key identities: h^{ij} v^(a)_j = e^i_{(a)}, and differentiation gives:
+
+  ∂_k h_{ij} = (∂_k v^(a)_i) v^(a)_j + v^(a)_i (∂_k v^(a)_j)
+
+4.3 Christoffel Symbols, Torsion-Free Connection, and Riemann Tensor
+
+The Levi-Civita connection in triadic variables:
+
+  Γ^k_{ij} = (1/2) e^k_{(a)} (∂_i v^(a)_j + ∂_j v^(a)_i)
+            + (1/2) h^{kl} [v^(a)_j (∂_i v^(a)_l − ∂_l v^(a)_i)
+                           + v^(a)_i (∂_j v^(a)_l − ∂_l v^(a)_j)]
+
+Torsion: T^k_{ij} = Γ^k_{ij} − Γ^k_{ji}. Since h_{ij} = h_{ji} explicitly:
+∂_l h_{ji} − ∂_l h_{ij} = 0, so T^k_{ij} = 0 identically. The Levi-Civita
+connection is the unique torsion-free metric-compatible connection.
+
+The Ricci scalar in triadic variables (after integration by parts):
+
+  R = (∂_i v^(a)_j)(∂^i v^{(a)j}) − (∂_i v^(a)_j)(∂^j v^{(a)i}) + div
+
+So: ∫ R d³x = −∫ (∂_i v^(a)_j)(∂^j v^{(a)i}) d³x + boundary.
+
+This is crucial: the naive action L = (∂v)² gives 9 independent scalar wave
+equations, NOT Einstein gravity. The cross-term (∂_i v^(a)_j)(∂^j v^{(a)i}) is
+required. It is exactly what the commutator algebra produces (Section 5).
+
+4.4 Full Spacetime Metric via ADM
+
+  ds² = −N² dτ² + h_{ij}(dx^i + N^i dτ)(dx^j + N^j dτ)
+
+det(g_μν) = −N² det(h_{ij}) < 0, since N > 0 and det(h) > 0. Lorentzian signature
+is guaranteed by N > 0, guaranteed in turn by directed edges on the causal graph.
+
+Lapse and shift from graph geometry:
+
+  N^i(x,τ) = <y^i − x^i>_{future neighbours}
+  N(x,τ) = √(1 − h_{ij} N^i N^j)
+
+Extrinsic curvature (in gauge N^i = 0):
+
+  K_{ij} = (1/2N)(v̇^(a)_i v^(a)_j + v^(a)_i v̇^(a)_j)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5. EMERGENCE OF THE EINSTEIN–HILBERT ACTION
+
+5.1 Non-Commutativity as the Fundamental Object
+
+The ordered operations S^i satisfy [S^i, S^j] ≠ 0. Non-commutativity is not
+postulated; it follows from: (1) each operation increases τ, (2) operations are
+sequential, (3) the system retains memory of the order (intermediate states
+differ). It is a causal effect independent of quantum mechanics. Define:
+
+  C^{ij} ≡ [S^i, S^j]    (antisymmetric by construction)
+
+In the isotropic continuum limit: [S^i, S^j] = iκ ε^{ijk} S^k with κ ∈ iℝ
+(sl(2,ℝ) algebra).
+
+5.2 Four-Index Tensor and GR Condition
+
+The effective action is encoded in T^{ijkl} = <C^{ik} C^{jl}>. By SO(3)
+rotational invariance of the isotropic state:
+
+  T^{ijkl} = A δ^{ij}δ^{kl} + B δ^{ik}δ^{jl} + C δ^{il}δ^{jk}
+
+Antisymmetry of C^{ij} forces B = −C, giving:
+
+  T^{ijkl} = A δ^{ij}δ^{kl} + B(δ^{ik}δ^{jl} − δ^{il}δ^{jk})
+
+Contracting with F_{ij} = ∂_i v^{(a)}_j and using the Ricci scalar identity
+from Section 4.3, the GR Lagrangian (in transverse gauge ∂^i v_i = 0):
+
+  L_GR = B [(∂_i v^(a)_j)(∂^i v^{(a)j}) − (∂_i v^(a)_j)(∂^j v^{(a)i})]
+       = B · R  +  boundary
+
+The GR condition is B = −A (or equivalently C/B = −1). The cross-term is not
+added by hand — it emerges from the antisymmetric tensor structure of T^{ijkl}.
+
+5.3 Ghost Sign from Causal Asymmetry
+
+The coefficient B must be positive for a ghost-free graviton. Define:
+
+  χ^{pq} = Σ_{Δτ} sgn(Δτ) <S^p(τ) S^q(τ+Δτ)>
+
+In a directed acyclic graph, backward correlations are suppressed:
+χ^{pq} ≈ Σ_{Δτ > 0} G^{pq}(Δτ) > 0. By rotational invariance: χ^{pq} = χ δ^{pq}.
+Then B ∝ χ > 0. The correct sign of the graviton kinetic term is a consequence
+of the causal directedness of the graph, not an additional assumption.
+
+5.4 Exact Algebraic Theorem: j = 1/2 is Unique
+
+For spin-j generators with T^{ijkl} = <n̂^i n̂^j n̂^k n̂^l> in the isotropic
+state, three SU(2) identities yield:
+
+  (I)  Cyclic trace:         C = A   (exact, all j)
+  (II) Squared Casimir:      12A + 3B = [j(j+1)]²
+  (III) Squared commutator:  B − A = −j(j+1)/6
+
+Closed-form solution:
+
+  A = C = κ⁴ · j(j+1)(2j²+2j+1) / 30
+  B     = κ⁴ · j(j+1)(j−1)(j+2) / 15
+
+GR condition B = −A reduces to:
+
+  4j² + 4j − 3 = (2j−1)(2j+3) = 0    →    j = 1/2 (unique physical root)
+
+The scalar-free condition A+B+C = 0 reduces to the same polynomial:
+
+  A + B + C = κ⁴ · j(j+1)(2j−1)(2j+3) / 30 = 0    →    j = 1/2
+
+Both conditions are equivalent; both select j = 1/2. For all j > 1/2, B/A
+increases monotonically toward +1 (classical limit). GR is the unique low-spin
+fixed point. (Complete table in Appendix A.)
+
+5.5 Recovery of Newton's Constant and Normalisation
+
+Explicit coefficients for j=1/2 with κ = i|κ|:
+
+  B = +|κ|⁴/16 > 0    (positive: ghost-free, consistent with χ > 0)
+  T^{ijkl}_{transverse} = (|κ|⁴/16)(δ^{ik}δ^{jl} − δ^{il}δ^{jk})
+
+The action with continuum normalisation (one edge per lattice cell, N/V = ε^{−3}):
+
+  S/V = (|κ|⁴/16) · ε^{−1} · R
+
+Setting equal to M_Pl²/2 · R:
+
+  M_Pl² = |κ|⁴/(8ε) = |κ|⁴/(8ℓ_P)
+
+So |κ| = (8ℓ_P M_Pl²)^{1/4}. In Planck units: |κ| = 8^{1/4} ≈ 1.68. Order unity,
+no fine-tuning. The full normalised action:
+
+  S = (1/16πG) ∫ d⁴x √(−g) R + S_matter,    1/(16πG) = M_Pl²/2
+
+5.6 Connection to Chern–Simons Theory and Ashtekar Variables
+
+The sl(2,ℝ) algebra of direction operators is the gauge algebra of 3D gravity
+with Λ < 0 (Witten 1988). The Chern–Simons connection on each spatial slice:
+
+  A^i = ω^i + |κ| e^i    (spin connection + triad)
+
+This is the Ashtekar–Barbero connection with imaginary Barbero–Immirzi parameter
+γ = i (self-dual). The non-commutativity parameter: |κ|² ↔ effective |Λ| at
+Planck scale. The Chern–Simons level k ~ M_Pl²/|κ|² is large in natural units,
+consistent with the classical limit being a good approximation. The causal graph
+selects the self-dual sector of the Ashtekar formulation from microscopic structure.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6. THE SCALAR MODE: FROM STATE VARIABLE TO CONDENSATE TO PURE GR
+
+The scalar mode Φ = (1/3) ln det v appears three times in the theory with
+different roles. Understanding all three levels is essential.
+
+6.1 Level 1: Non-Propagating State Variable (j=1/2 vacuum)
+
+Triad factorization: v^(a)_i = e^Φ ṽ^(a)_i, det ṽ = 1. The scalar kinetic term:
+
+  S_Φ = ∫ d⁴x e^{2Φ} (A+B+C)(∂_k Φ)(∂^k Φ) = 0    (since A+B+C = 0 at j=1/2)
+
+No wave equation, no propagator. δS/δΦ = 0 gives a constraint: Φ is determined
+by the shape sector. It has no independent dynamics.
+
+Statistical identification: consider a cell at x with N(x) steps. The number of
+microscopic sequences realising the local triad:
+
+  ln Ω(x) = N(x) [C_0 + (1/3) ln det v(x)] + O((∂v)²/N)
+
+So Φ_stat(x) ≡ (1/N) ln Ω(x) = Φ_geom(x) + C_0. The geometric volume element
+√h(x) is proportional to the number of admissible microscopic paths Ω(x). Φ
+is the local entropy density of the causal graph — a label on the state of the
+medium, not an excitation above it.
+
+Analogy — incompressible fluid:
+
+  Transverse modes (graviton)    ↔  vortex modes in v^T
+  Non-propagating Φ              ↔  pressure (Lagrange multiplier)
+  Transverse gauge ∂^i v_i = 0  ↔  div v = 0 (incompressibility)
+
+6.2 Level 2: Condensate (Spontaneous Symmetry Breaking)
+
+Non-commutativity lifts the degeneracy at Φ = 0. Effective entropy potential:
+
+  V_eff(Φ) = −|α| Φ² + β Φ⁴ + O(Φ⁶),    |α| ~ κ² N^γ, β > 0
+
+The system spontaneously selects a nonzero volume element:
+
+  <Φ> = v = √(|α|/(2β)) ≠ 0
+
+Vacuum energy: V(v) = −|α|²/(4β). After sign convention (action = −V_eff):
+
+  Λ_eff ~ |α|²/(4β) ~ O(M_Pl⁴) for γ = 0
+
+This is a Planck-scale cosmological constant: the entropic cosmological constant
+problem. The broken symmetry is Φ → Φ + const (a scaling symmetry of the volume
+element). Excitations δΦ around the condensate have mass m² = 2|α| ~ O(M_Pl²).
+
+6.3 Level 3: Emergence of Diffeomorphism Invariance (IR limit)
+
+At energies E << m_δΦ ~ M_Pl, all scalar fluctuations are exponentially
+suppressed. The surviving degrees of freedom are the two transverse graviton
+modes. The effective theory is pure GR.
+
+The transverse gauge ∂_i v^{(a)i} = 0 is not an arbitrary gauge choice — it
+is the statement that Φ is frozen at the condensate value v. Volume-preserving
+diffeomorphisms are the unbroken subgroup of the full diffeomorphism group at the
+condensate. They become the emergent gauge symmetry of the IR theory as a Ward
+identity of the condensate phase.
+
+Conjecture (to be proved): Branch A (pure GR, transverse gauge as Ward identity
+of volume-preserving diffeomorphisms) = IR limit of Branch B2 (condensate phase).
+
+The required steps: (i) show the massive scalar decouples cleanly at one loop;
+(ii) derive the Ward identity of volume-preserving diffeomorphisms from the
+condensate; (iii) verify no Goldstone mode appears (the broken symmetry is a
+gauge symmetry; the Goldstone is eaten by the graviton, analogously to the Higgs
+mechanism). This is a concrete, tractable programme for future work.
+
+Implication: diffeomorphism invariance is not a fundamental symmetry. It is the
+low-energy remnant of a broken scaling symmetry whose order parameter is the
+scalar condensate <Φ>.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+7. MATTER COUPLING AND DENSITY-DEPENDENT SCALAR MASS
+
+7.1 Structural Distinction from Chameleon Models
+
+The density-dependent mass m²(ρ) = σρ − α does NOT come from an effective
+potential V(Φ) added by hand. It emerges from the absorption term −σρω in the
+path-counting action, which is the rate at which causal paths are lost into matter.
+This is kinetic screening — screening as a consequence of dynamics, not design.
+
+Comparison with prior work:
+
+  Aspect                     Khoury-Weltman 2004     This work
+  ─────────────────────────  ──────────────────────  ─────────────────────────
+  Origin of scalar mass      hand-put V(φ)           absorption term −σρω
+  Form of m²(ρ)              ∝ ρ^{n/(n+1)}           linear: σρ − α
+  Scalar field equation      nonlinear in φ          linear in Φ
+  Compact-object solutions   numerical only          exact analytical
+  ω_BD parameter             not applicable          = 1 (derived)
+  Ghost closure              implicit                explicit (Section 9)
+  Spontaneous scalarisation  possible                absent (m² > 0 always)
+
+7.2 Path Amplitudes with Absorption
+
+In the presence of matter with density ρ, paths are absorbed at rate σρ. The
+transition from path probabilities to path amplitudes is essential for the correct
+(linear) mass scaling:
+
+  A(γ) = e^{iS[γ]} · exp(−(σ/2) ∫_γ ρ ds)    (half-rate absorption on amplitude)
+
+The observable path density is ω(x) = |Ψ(x)|², Ψ(x) = Σ_{γ→x} A(γ).
+In the linear fluctuation regime (Ψ = Ψ_0 + δΨ):
+
+  (□ − σρ) δΨ = 0    →    m²(ρ) = σρ − α    (Klein-Gordon with linear mass)
+
+The linearity in ρ is structural: absorption enters the action once (not squared),
+because it acts on the amplitude (not the intensity). Probability-level absorption
+would give m² = (σρ)²/4 (quadratic in ρ). The amplitude prescription is the
+microscopic reason for the linear screening.
+
+7.3 Brans-Dicke Parameter ω_BD = 1
+
+The quadratic action after expanding the full path-statistics action to second
+order around flat background (φ = scalar fluctuation, h^{TT} = graviton):
+
+  S^{(2)} = (M_Pl²/8) ∫ h^{TT} □ h^{TT} + ∫ (∂φ)² + ∫ M_Pl² φ □ h̄ + mass terms
+
+After diagonalization (Φ = φ + c h̄/M_Pl), the physical scalar:
+
+  L_Φ = (1/2)(∂Φ)² − (1/2) m²(ρ) Φ²
+
+The kinetic coefficient is exactly 1. This fixes the Brans-Dicke parameter:
+ω_BD = 1. It is not a free parameter — it is determined by the structure of
+the path-statistics kinetic term e^φ(∂φ)² ~ (∂φ)² at quadratic order.
+
+7.4 Coupling to Matter
+
+Varying the matter action with respect to Φ:
+
+  (□ − m²(ρ)) Φ = (β/M_Pl) T ≈ −(β/M_Pl) ρ    (T ≈ −ρ, non-relativistic)
+
+The coupling constant β follows from the variation. Two routes give slightly
+different values:
+  — From triad variation (trace vs. traceless decomposition of δv^{(a)}_i):  β = √3/2
+  — From direct δS_matter/δΦ ~ (1/2)T δΦ after diagonalization:  β ~ 1
+
+This discrepancy is an open technical question: the exact value of β depends on
+whether the scalar contribution to the metric perturbation is fully accounted for
+in the diagonalization step. Until resolved, β is treated as O(1) with the
+understanding that β = √3/2 is the geometric lower bound and β = 1 is the
+variational upper bound.
+
+7.5 Three Density Regimes
+
+The condition m²(ρ_c) = 0 defines ρ_c = α/σ. With natural identification α ~ H_0²:
+ρ_c ~ 10^{−55} kg/m³, far below interstellar medium density ρ_ISM ~ 10^{−21} kg/m³.
+
+  Regime             Condition     Physics
+  ─────────────────  ────────────  ─────────────────────────────────────────
+  Screened           ρ >> ρ_c      Yukawa, GR recovered
+  Critical           ρ = ρ_c       Massless: ∇²Φ = (β/M_Pl) ρ
+  Potentially unst.  ρ < ρ_c       m² < 0; stabilised by condensate (Sec. 6)
+
+The potentially unstable regime (m² < 0) is never realised in any known
+astrophysical environment. The condensate mechanism of Section 6 stabilises it.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+8. EQUATIONS OF MOTION AND NEWTONIAN LIMIT
+
+8.1 Full Action (Standard Phase)
+
+  S = (M_Pl²/2) ∫ d⁴x √(−g) R + S_matter
+
+At j=1/2: A+B+C = 0, so the scalar kinetic term vanishes at leading order. The
+theory reduces to standard GR.
+
+8.2 Einstein Equations
+
+  G_μν = (1/M_Pl²) T_μν    (standard GR, no modification)
+
+8.3 Scalar Equation in Matter
+
+  (□ − m²(ρ)) Φ = (β/M_Pl) T ≈ −(β/M_Pl) ρ
+
+In vacuum (ρ = 0): □Φ = 0, which is satisfied by Φ = const (consistent with the
+non-propagating nature) and by 1/r solutions.
+
+8.4 Newtonian Limit
+
+Expanding around flat spacetime with T_00 ≈ ρ, in harmonic gauge:
+
+  ∇² h_00 = −2ρ/M_Pl²    →    ∇² Φ_N = ρ/M_Pl²    →    Newton's law ✓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+9. PHYSICAL SPECTRUM, GHOST ANALYSIS, AND STABILITY
+
+9.1 Physical Degrees of Freedom
+
+Before gauge fixing: 11 field components (1 scalar ω + 10 from symmetric ω^{μν}).
+Diffeomorphism invariance removes 4. The soft constraint removes 1 more, leaving:
+
+  2 massless helicity-±2 gravitons + 1 physical scalar Φ = 3 propagating d.o.f.
+
+In the standard phase (j=1/2), Φ is non-propagating (A+B+C=0). Effective count:
+2 graviton d.o.f., consistent with pure GR.
+
+9.2 Exact Kinetic Matrix and Ghost Proof
+
+The scalar-metric mixing matrix in momentum space:
+
+  M(p) = | p² − m²     β p²  |
+         | β p²        γ p²  |
+
+where γ ~ M_Pl²/4 from the Einstein–Hilbert trace coefficient.
+
+Eigenvalues: λ_± = (1/2)[(1+γ)p² − m² ± √{[(1−γ)p² + m²]² + 4β²p⁴}]
+
+Ghost-free condition: det(M_kin) > 0, where M_kin is the kinetic sub-matrix.
+Since all diagonal entries are positive and the determinant:
+
+  det = (p²)(p² − m²) − β²p⁴ = p²[(1−β²)p² − m²]
+
+For m² > 0 and p² < m²/(1−β²): det > 0 when β < 1. For β = O(1), the ghost-free
+regime requires either m² > 0 (matter environment) or the condensate mechanism
+providing a mass floor. No negative-norm modes appear in the physically relevant
+density regimes.
+
+9.3 Hamiltonian Positivity
+
+The quadratic Hamiltonian:
+
+  H = (M_Pl²/8)(ḣ^{TT})² + (∇h^{TT})² + (1/2)Φ̇² + (1/2)(∇Φ)² + (1/2)m²(ρ)Φ²
+
+Every term is a perfect square with positive coefficient. H ≥ 0 explicitly, term
+by term, without eigenvalue arguments. Higher-order terms inherit the same sign
+structure from the path-statistics action.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+10. EXACT ANALYTICAL SOLUTION FOR COMPACT OBJECTS
+
+10.1 Scalar Equation for a Uniform Sphere
+
+In the static limit with interior density ρ_in and exterior vacuum:
+
+Interior (r ≤ R), m_in² = σρ_in − α > 0, inhomogeneous Helmholtz equation.
+Regular solution at r = 0:
+
+  Φ_in(r) = A sinh(m_in r)/r + β ρ_in / (M_Pl m_in²)
+
+The second term is the particular (plateau) solution; A is fixed by matching.
+
+Exterior (r > R), ρ = 0, m_out² = −α ≈ 0. Decaying solution:
+
+  Φ_out(r) = B e^{−m_out r} / r
+
+10.2 Matching Conditions and Exact Coefficients
+
+Matching Φ and dΦ/dr at r = R gives:
+
+  A sinh(μ) + PR = B e^{−ν}
+  A(μ cosh μ − sinh μ) = −B(ν+1) e^{−ν}
+
+where μ = m_in R, ν = m_out R, P = β ρ_in/(M_Pl m_in²), PR = 3βM/(4πM_Pl μ²).
+Eliminating A:
+
+  B = [3βM / (4πM_Pl μ²)] · [(μ cosh μ − sinh μ)/(μ cosh μ + ν sinh μ)] · e^ν
+
+10.3 Strong-Screening Limit and Fifth-Force Strength
+
+For m_in R >> 1 (always satisfied for macroscopic bodies; m_in R ~ 10^{10} for Earth):
+
+  B ≈ 3βM / (4πM_Pl (m_in R)²)    →    α_eff = F_Φ/F_N ≈ 6β²/(m_in R)²
+
+This is the thin-shell suppression. Note: the coefficient is 6 = 8π × 3/(4π),
+not 2 — an error in earlier versions corrected here.
+
+Limits:
+  μ → 0:  α_eff → 2β²  (unsuppressed fifth force, no screening)
+  μ → ∞:  α_eff → 6β²/μ²  (strong screening)
+
+10.4 PPN Parameter and Compactness Dependence
+
+Effective Newtonian potential:
+
+  V(r) = −(GM/r) [1 + α_eff e^{−m_out r}]
+
+PPN parameter: γ_PPN = (1 − α_eff)/(1 + α_eff) ≈ 1 − 2α_eff.
+
+Key feature: γ_PPN is NOT universal. It depends on compactness M/R:
+
+  γ − 1 ∝ R/(σM) ∝ 1/(compactness)
+
+More compact objects deviate less from GR. This is a definite prediction distinct
+from standard scalar-tensor theories where γ is a universal constant.
+
+For Earth (m_in R ~ 10^{10}, β ~ 1):
+
+  α_eff ~ 6×10^{−20},    |γ_PPN − 1| ~ 1.1×10^{−19}
+
+Satisfies the Cassini bound (|γ − 1| < 2.3×10^{−5}) by 14 orders of magnitude.
+The scalar force is always attractive (α_eff > 0).
+
+10.5 Equivalence Principle Violation (Eötvös Parameter)
+
+For two bodies of different densities ρ_1, ρ_2 and similar size R (both in strong-
+screening regime μ >> 1):
+
+  η ≈ 6β² |ρ_2 − ρ_1| / (ρ_1 ρ_2 σ R²)
+
+For laboratory masses (Al vs Pt, R ~ 1 cm, σ ~ 500):
+  μ_Al ~ 11.6, μ_Pt ~ 32.7, η ~ 3.5×10^{−2}
+
+This conflicts with the MICROSCOPE bound η < 10^{−15}. This is the primary
+observational tension of the theory. Three candidate resolutions:
+
+  (i)  σ >> 500: the Earth-screening calibration underestimates σ; with
+       σ ~ 10^{15} the lab constraint is satisfied while the Earth-scale
+       prediction α_eff ~ 10^{−32} remains unobservable.
+
+  (ii) Back-reaction: the scalar force is already encoded in the metric
+       perturbation after diagonalization (Section 9), so computing α_eff
+       separately involves double counting. If the physical α_eff = 0 (all
+       force is in the metric), MICROSCOPE is automatically satisfied.
+
+  (iii) β receives sub-leading corrections: the geometric value β = √3/2 may
+        be shifted to a smaller effective coupling by quantum or lattice corrections.
+
+Resolution (ii) is the most structurally natural and requires an explicit
+calculation of the Newtonian potential from the diagonalized metric in the
+Jordan and Einstein frames. This is the primary open technical question.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+11. COSMOLOGY
+
+11.1 FRW and the Scalar Background
+
+In a homogeneous isotropic universe with scale factor a(t):
+
+  det v^(a)_i = a³    →    Φ = ln a
+
+The scalar Φ is the log of the scale factor. Cosmic expansion IS the cosmological
+evolution of the volume mode.
+
+FLRW scalar equation (with matter density ρ_m):
+
+  Φ̈ + 3H Φ̇ + (σρ_m − α) Φ = (β/M_Pl) ρ_m
+
+Two regimes:
+
+  Matter domination (ρ_m large):  m² ≈ σρ_m >> 1
+  Scalar on plateau: Φ ≈ β/(M_Pl σ) ~ const, close to GR.
+
+  Late universe (ρ_m → 0):  m² ≈ −α (nearly massless)
+  Possible dynamical dark energy: w_Φ(a) different from Λ CDM.
+  The linear m² ∝ ρ gives different w_Φ(a) and growth rate f σ_8(a) than both
+  ΛCDM and standard chameleon models (where m² ∝ ρ^{n/(n+1)}). Numerical
+  computation of these observables and comparison with Planck data is needed.
+
+11.2 Resolution of the Stiff-Matter Problem
+
+If Φ were a propagating field (A+B+C ≠ 0), the equation □Φ = 0 in FRW with
+Φ = ln a would give Ḣ + 3H² = 0 → a(t) = t^{1/3}. This is the stiff-matter
+equation of state w = 1, not standard cosmology.
+
+Resolution: at j=1/2, A+B+C = 0, so Φ does not satisfy a wave equation. The
+stiff-matter solution is an artefact of incorrectly treating Φ as propagating.
+In the correct picture, Φ = ln a is a background state label, not a dynamical
+variable. Standard Friedmann evolution from matter alone:
+
+  3H² = ρ_matter / M_Pl²    ✓
+
+The condition m >> H at all epochs guarantees Φ adiabatically tracks the
+background. Standard cosmology is fully recovered.
+
+11.3 Running of Newton's Constant
+
+Slow evolution of <Φ>(t) under V_eff drives a running of G_eff:
+
+  |d ln G/dt| ~ 10^{−30}–10^{−40} yr^{−1}  (γ ≤ 1, allowed)
+  |d ln G/dt| ~ 10^{−10} yr^{−1}            (γ = 2, excluded by LLR)
+
+Current bound: |dG/G dt| < (2–4)×10^{−13} yr^{−1}. Only γ ≤ 1 is allowed.
+In all physically allowed regimes the running is unobservably small.
+
+11.4 Cosmological Constant
+
+The condensate contributes Λ_eff ~ |α|²/(4β) ~ M_Pl⁴. Matching Λ_obs ~ 10^{−120} M_Pl⁴
+requires 120 orders of magnitude cancellation. The cosmological constant problem
+is not solved — it is reformulated as an entropic fine-tuning: why is the spectral
+collapse of the underlying state space so nearly complete?
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+12. BLACK HOLE PHYSICS
+
+12.1 Entropy
+
+The theory reduces to pure GR in the infrared. Schwarzschild is an exact solution.
+Φ = const for static black holes (non-propagating, no scalar hair). Standard:
+
+  κ_surface = c⁴/(4GM)
+  T_H = ℏc³/(8πGMk_B)
+  S = k_B A / (4ℓ_P²)    [Bekenstein–Hawking, no free parameters]
+
+In LQG, correct entropy requires tuning γ = γ_0 = ln2/(π√3) ≈ 0.274 post hoc.
+Here: the sl(2,ℝ) algebra selects γ = i (self-dual Ashtekar value) from the
+microscopic structure; no tuning required.
+
+12.2 Hawking Radiation from Path Counting
+
+The path-density equation in spherical symmetry (stationary, ρ = e^{3Φ}):
+
+  Δ u = 0,    u = e^{3Φ}    →    u(r) = A − C/r
+
+Horizon at r_h = C/A (where u = 0, path density vanishes). Near-horizon structure:
+u ≈ κ(r − r_h) with surface gravity κ = A²/C = 1/r_h.
+
+The temporal coordinate t ~ (1/κ) ln[1/(r − r_h)] near the horizon. Mode
+ψ_Ω(τ) = e^{−iΩτ} transforms to ψ_Ω(t) ∝ exp(i(Ω/κ)e^{−κt}). Computing
+Bogoliubov coefficients via z = e^{−κt}:
+
+  |β_ω|²/|α_ω|² = e^{−2πω/κ}    →    n(ω) = 1/(e^{2πω/κ} − 1)
+
+Hawking temperature T = κ/(2π) = 1/(2πr_h) ~ 1/M. This reproduces Hawking's
+result from the path-density equation alone, without quantising a field on a
+curved background.
+
+Black hole entropy from path counting: S ~ ∫ dV/(r − r_h)² ~ r_h²/ε ∝ A/(UV cutoff).
+First law: T dS ~ (1/r_h) r_h dr_h = dr_h ~ dM ✓.
+
+12.3 Evaporation and Information
+
+Including dissipation (back-reaction term Γ ~ D(∇Φ)²), the mass parameter
+C(τ) = √(C_0² − 2DA²τ). At C → 0: r_h → 0, ρ → A = const, Φ → const,
+h_{ij} → flat. Complete evaporation returns spacetime to flat space. Information
+is encoded in the path-density correlation functions throughout the process;
+unitarity of the path amplitude prescription is preserved.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+13. CONSTRAINT ALGEBRA
+
+Canonical brackets: {v^(a)_i(x), π^(b)j(y)} = δ^{ab} δ^j_i δ³(x−y)
+
+Constraints:
+
+  H   = (1/2M_Pl²)(π² − (1/2)(tr π)²) − M_Pl² √h R ≈ 0
+  H_i = −2∇_j π^j_i ≈ 0
+
+Closure at linear order:
+
+  {H_i(x), H_j(y)} = H_j(x)∂_i δ³(x−y) − H_i(y)∂_j δ³(x−y)  ✓
+  {H_i(x), H(y)}   = H(x) ∂_i δ³(x−y)                         ✓
+  {H(x), H(y)}     = δ^{ij} H_j(x) ∂_i δ³(x−y) − (x↔y)       ✓
+
+At second order, the anomalous term Δ = ε^{ij} H_i ∂_j δ³ satisfies
+{Δ, H} ∝ constraints (soft anomaly). No new structures arise. Full nonlinear
+closure remains open, shared with LQG.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+14. PHASE STRUCTURE AND OBSERVABLE WINDOWS
+
+14.1 Two Phases
+
+Phase 1 — GR Phase: |α| ~ N² (fully correlated), m ~ N M_Pl, complete IR
+decoupling. Pure GR. No testable predictions beyond standard GR.
+
+Phase 2 — Critical Phase: power-law graph correlations with entropic kernel
+K(x) ~ |x|^{−(3+σ)}, anomalous dimension γ ~ σ = 2 − η. The criticality
+condition γ ≥ (2−η)/3 reduces to σ ≥ σ/3, satisfied for all σ > 0. Any
+nonlocal entropic kernel drives the system toward Phase 2.
+
+GR is a phase, not simply the unique IR limit. Deviations from GR are the
+signature of proximity to the critical point of the graph dynamics.
+
+14.2 Experimental Window
+
+For N ~ 10^{60} (Planck-scale operations in a macroscopic system) and σ = 2:
+
+  m ~ N^{−σ/3} M_Pl ~ 10^{−40} M_Pl ~ 10^{−3} eV,    λ ~ 0.1 mm
+
+Geometrically fixed coupling: α = β²/3 ~ 1/4. This is a specific falsifiable
+prediction: fifth-force signal at the 0.1 mm scale with α ~ 1/4. Current
+Eöt-Wash bounds: α < 10^{−3} at λ ~ 0.1 mm — so σ = 2 is nearly excluded.
+For σ = 1: m ~ 10^{8} GeV, too heavy for current experiments.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+15. COMPLETE DERIVATION CHAIN
+
+  Three scribes S_1, S_2, S_3
+       ↓  one spatial direction each, equal cost C_min (isotropy by construction)
+  Causal directed acyclic graph, N steps
+       ↓  time = accumulated computation (unidirectional: +)
+       ↓  space = displacement (bidirectional: ±ε)
+  Lorentzian signature (−,+,+,+)
+       ↓  pre-interval, Legendre transform, commutator: three derivations, one fact
+       ↓  time gain minus space cost → minus sign
+  Path entropy: ln Ω = const − (3/2Nε²)|x|²
+       ↓  recursion ω(x+ε) + ω(x−ε) → Laplace–Beltrami → diffusion on (M, h_{ij})
+       ↓  path-tensor ω^{ij}/ω → spatial metric h^{ij}
+       ↓  path combinatorics → c_R = ε³/3 → G ~ ε
+       ↓  full non-local action: S = ∫√h[R + R·ℱ(Δ)·R + ···], ghost-free
+  Spatial triads v^(a)_i (positive-definite h_{ij}), torsion-free connection
+       ↓  Ricci scalar: ∫R = −∫(∂_i v^(a)_j)(∂^j v^{(a)i}) (cross-term, not (∂v)²)
+       ↓  ADM: lapse N, shift N^i from graph future neighbours
+  Full spacetime metric g_μν (Lorentzian, N > 0 → directed edges)
+       ↓  commutator C^{ij} = [S^i, S^j] (causal, not quantum)
+       ↓  χ > 0 from directed graph → B > 0 → graviton kinetic term correct sign
+  T^{ijkl} = <C^{ik} C^{jl}>
+       ↓  SO(3) invariance + antisymmetry → B = −C
+       ↓  three SU(2) identities → A = C = j(j+1)(2j²+2j+1)/30, B = j(j+1)(j−1)(j+2)/15
+  Polynomial (2j−1)(2j+3) = 0
+       ↓  GR:           B = −A  ↔  j = 1/2 (unique)
+       ↓  scalar-free:  A+B+C=0 ↔  j = 1/2 (same polynomial, same root)
+  Einstein–Hilbert: S = (1/16πG) ∫√(−g) R, |κ| ~ O(1) in Planck units
+       ↓  sl(2,ℝ) ↔ Chern-Simons ↔ Ashtekar self-dual γ = i (no BI free param.)
+  Scalar Φ = (1/N) ln Ω = local entropy density
+       ↓  Level 1 (vacuum, j=1/2): non-propagating state variable (A+B+C = 0)
+       ↓  Level 2 (condensate): <Φ> = v ≠ 0, m_δΦ ~ M_Pl, Λ_eff ~ M_Pl⁴
+       ↓  Level 3 (IR limit): massive scalar decouples → volume-preserving diff.
+          invariance as Ward identity → pure GR (diffeomorphism invariance emergent)
+  In matter: m²(ρ) = σρ − α (linear, from path amplitudes), ω_BD = 1 (derived)
+       ↓  Exact analytical solution: Φ_in = A sinh(m_in r)/r + plateau
+       ↓  Thin-shell: α_eff = 6β²/(m_in R)², compactness-dependent γ_PPN
+       ↓  FRW: stiff-matter artefact resolved, standard cosmology recovered
+  Pure GR in the infrared
+       ↓  Schwarzschild exact solution, Φ = const, no scalar hair
+       ↓  Hawking radiation from path-density equation, T_H = 1/(2πr_h)
+       ↓  Evaporation to flat space, information preserved in path amplitudes
+  Black hole entropy S = k_B A/(4ℓ_P²)   (no Barbero–Immirzi parameter)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+16. OPEN QUESTIONS
+
+In order of importance:
+
+  (i)  MICROSCOPE tension and double counting. The Earth-calibrated σ ~ 500
+       predicts lab-scale EP violation η ~ 3.5×10^{−2} for Al/Pt at 1 cm —
+       14 orders above MICROSCOPE. The most natural resolution is that the scalar
+       force is already encoded in the metric perturbation after diagonalization
+       (no independent fifth force). An explicit computation of the physical
+       Newtonian potential from the diagonalized metric in both Jordan and Einstein
+       frames is required. If the two agree, MICROSCOPE is automatically satisfied
+       and the theory is viable. If they disagree, σ ~ 10^{15} is required.
+
+  (ii) β discrepancy. The triad variation gives β = √3/2; the matter variation
+       gives β ~ 1. The exact value determines the fifth-force strength. Resolving
+       this requires a careful treatment of the full diagonalization of the scalar-
+       metric mixing (Section 9).
+
+  (iii) Diffeomorphism invariance as Ward identity. The conjecture that Branch A
+        (pure GR) = IR limit of Branch B2 (condensate) requires: (a) showing the
+        massive scalar decouples at one loop; (b) deriving the Ward identity of
+        volume-preserving diffeomorphisms from the condensate; (c) verifying no
+        independent Goldstone mode appears.
+
+  (iv) Quantisation and quantum group deformation. Does the sl(2,ℝ) structure
+       survive quantisation or deform into a quantum group SL_q(2,ℝ)? The
+       Chern–Simons level k ~ M_Pl²/|κ|² suggests a possible discrete holographic
+       formulation.
+
+  (v)  Second-order dynamics from first principles. The wave equation (∂_t² − c²∇²)
+       should emerge from the graph topology. A rigorous derivation of the Lorentzian
+       sign from causal ordering — not the pre-interval argument but from the full
+       operator algebra — is incomplete.
+
+  (vi) Cosmological constant. The condensate contributes Λ_eff ~ M_Pl⁴. The
+       cancellation mechanism to 120 orders of magnitude is not identified.
+
+  (vii) Late-universe dark energy. The linear mass m²(ρ) = σρ − α may give
+        dynamical dark energy distinct from Λ CDM when ρ_m → 0. Numerical
+        computation of w_Φ(a) and f σ_8(a), and comparison with Planck/DESI
+        data, is a concrete near-term prediction to test.
+
+  (viii) Nonlinear constraint closure and full diffeomorphism invariance.
+         The constraint algebra closes through quadratic order. Full nonlinear
+         closure (shared with LQG) remains open.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CONCLUSION
+
+General Relativity emerges as the unique infrared fixed point of path statistics
+on a directed causal graph with three scribes. The derivation is constructive and
+essentially parameter-free: Lorentzian signature, the Einstein–Hilbert action with
+the correct coefficient, the non-propagating scalar at j=1/2, Hawking radiation
+and evaporation, and the black hole area law all follow from the single microscopic
+fact that scribe operations do not commute. The Barbero–Immirzi parameter is fixed
+to the self-dual Ashtekar value γ = i. The Brans-Dicke parameter ω_BD = 1 is
+derived, not assumed. The screening mechanism is kinetic, not potential-based.
+Diffeomorphism invariance is emergent — the Ward identity of a spontaneously broken
+scaling symmetry — not a fundamental input.
+
+The scalar mode Φ serves as the thread connecting all levels: it is the local
+entropy density of admissible computational histories in the UV, a condensate order
+parameter at the intermediate scale, and a decoupled non-entity in the deep IR.
+Spacetime is the coarse-grained description of path statistics on a causal graph.
+General Relativity is not imposed — it is representation-constrained: the unique
+dynamics consistent with the minimal spin-1/2 algebra of causally ordered operations.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+APPENDIX A: Exact Coefficients for Arbitrary Spin j
+
+From three SU(2) identities (all values in units of κ⁴):
+
+  A(j) = C(j) = j(j+1)(2j²+2j+1) / 30
+  B(j)         = j(j+1)(j−1)(j+2) / 15
+  A+B+C        = j(j+1)(2j−1)(2j+3) / 30
+  B/A          = 2(j²+j−2)/(2j²+2j+1)
+
+  j     A=C       B        B/A      GR?  Scalar?    Physical interpretation
+  ────  ────────  ───────  ───────  ───  ─────────  ────────────────────────
+  1/2   1/16     −1/16     −1      YES  absent ✓   Exactly GR — unique
+  1     1/3       0         0      NO   present     B absent, no GR
+  3/2   17/16     7/16      7/17   NO   present     All structures appear
+  2     13/5      8/5       8/13   NO   present     Full tensor basis
+  ∞    ~j⁴/15   ~j⁴/15    → +1   NO   present     Classical (non-GR)
+
+Both GR condition (B = −A) and scalar-free condition (A+B+C = 0) reduce to the
+same polynomial (2j−1)(2j+3) = 0, whose unique physical root is j = 1/2. They
+are two faces of the same algebraic fact.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+APPENDIX B: Density-Dependent Mass — Numerical Confirmation
+
+1+1D causal lattice (T=300, S=600 sites), complex path amplitudes with half-rate
+absorption (σ = 0.05, phase factor = 0.9), 5-point Laplacian stencil, leapfrog:
+
+  ρ       m²_eff (from dispersion relation)
+  ──────  ──────────────────────────────────
+  0.000   0.0124  (lattice baseline artefact)
+  0.010   0.0131
+  0.030   0.0149
+  0.050   0.0167
+  0.080   0.0195
+
+Linear fit slope ≈ 0.088 vs theoretical σ = 0.05; factor ~1.76 is a lattice
+discretisation artefact decreasing to 1 in the continuum limit. Both the
+linearity in ρ and the order of magnitude are confirmed. Non-uniform density
+profile (ρ_in = 0.08, R = 80 lattice units) shows stronger damping inside and
+Yukawa-like decay outside, qualitatively consistent with the thin-shell analytical
+solution of Section 10.

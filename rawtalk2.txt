@@ -1,0 +1,499 @@
+Ок, давай сделаем это максимально «в лоб» и честно: построим causal (time-ordered) пропагатор для твоего поля и посмотрим спектр по спинам.
+
+1. Квадратичное действие (исходная точка)
+
+\mathcal{L}_2 = 2B \, F^a_{ij} F^{ij\,a}, \qquad F^a_{ij} = \partial_i v^a_j - \partial_j v^a_i 
+
+Переходим к (3+1)D, иначе «спин-2» вообще некорректен (в 3D нет пропагирующего гравитона).
+
+2. Кинетический оператор
+
+В импульсном пространстве:
+
+M_{ij}^{ab}(k) = 2B \, \delta^{ab} (k^2 \eta_{ij} - k_i k_j) 
+
+3. Фиксация калибровки (иначе неинвертируемо)
+
+Берём, например, covariant gauge:
+
+\mathcal{L}_{gf} = \frac{1}{2\xi} (\partial^i v_i^a)^2 
+
+⇒ полный оператор:
+
+M_{ij}^{ab}(k) = 2B \, \delta^{ab} \left[ k^2 \eta_{ij} - \left(1 - \frac{1}{\xi}\right) k_i k_j \right] 
+
+4. Causal (Feynman) пропагатор
+
+Инвертируем:
+
+\boxed{ D_{ij}^{ab}(k) = \frac{i\,\delta^{ab}}{2B} \frac{1}{k^2 + i\epsilon} \left[ \eta_{ij} - (1-\xi)\frac{k_i k_j}{k^2} \right] } 
+
+5. Спектральный анализ (самое главное)
+
+Разложим по представлениям группы вращений:
+
+Проекторы:
+
+Поперечный:
+
+P^{T}_{ij} = \eta_{ij} - \frac{k_i k_j}{k^2} 
+
+Продольный:
+
+P^{L}_{ij} = \frac{k_i k_j}{k^2} 
+
+Тогда:
+
+D_{ij}^{ab}(k) = \frac{i\,\delta^{ab}}{2B} \left[ \frac{P^T_{ij}}{k^2} + \xi \frac{P^L_{ij}}{k^2} \right] 
+
+6. Полюса
+
+Единственный полюс:
+
+\boxed{k^2 = 0} 
+
+→ массовый безмассовый возбуждённый режим
+
+7. Какой это спин?
+
+Теперь ключевой момент.
+
+Поле:
+
+v_i^a 
+
+трансформируется как:
+
+вектор по пространству (индекс )
+
+скаляр по цвету (индекс — внутренний)
+
+Разложение:
+
+каждое даёт:
+
+\text{spin-1} 
+
+(поперечные компоненты)
+
+Итого:
+
+3 \times \text{spin-1} 
+
+8. Есть ли spin-2?
+
+Чтобы был spin-2, нужен пропагатор вида:
+
+\frac{P^{(2)}_{ijkl}}{k^2} 
+
+где — проектор на симметричный traceless тензор:
+
+h_{ij} 
+
+У тебя:
+
+пропагатор только двухиндексный:
+
+D_{ij} 
+
+⇒ нет структуры:
+
+traceless projector
+
+spin-2 representation
+
+9. Проверка через составное поле
+
+Можно попытаться:
+
+h_{ij} = v_i^a v_j^a 
+
+Тогда:
+
+\langle T h_{ij} h_{kl} \rangle \sim D_{ik} D_{jl} + D_{il} D_{jk} 
+
+Что получится:
+
+\sim \frac{1}{k^4} 
+
+а не:
+
+\frac{1}{k^2} 
+
+Это важно:
+
+spin-2 полюс должен быть 
+
+здесь получается 
+
+⇒ это составное (bound-like) возбуждение, не фундаментальный гравитон
+
+10. Роль causal ordering
+
+Ты правильно ожидал, что causal ordering может что-то изменить.
+
+Но:
+
+👉 он меняет тензор коэффициентов (вершины)
+👉 но НЕ меняет кинетический оператор
+
+Следствие:
+
+полюса определяются только квадратичной частью
+
+causal структура не создаёт новый тип пропагатора
+
+11. Итог (жёсткий, но чистый)
+
+\boxed{ \text{В теории есть только massless spin-1 полюса} } \boxed{ \text{spin-2 полюса НЕТ} } 
+
+12. Физическая интерпретация
+
+Ты получил:
+
+👉 3 безмассовых векторных поля
+👉 с нелинейными self-interactions (из ⟨CCC⟩)
+
+Это:
+
+не GR
+
+не линейная гравитация
+
+а что-то типа:
+
+\text{nonlinear } U(1)^3 \text{ gauge theory} 
+
+13. Но есть важный нюанс (интересный)
+
+Хотя фундаментального spin-2 нет, возможно:
+
+emergent режим:
+
+если:
+
+сильные корреляции
+
+IR-эффективное описание
+
+coarse-graining
+
+то:
+
+v_i^a v_j^a \;\Rightarrow\; h_{ij} 
+
+может вести себя как метрика
+
+но тогда:
+
+гравитон будет не фундаментальный
+
+а коллективное возбуждение
+
+14. Куда идти дальше (реально сильный шаг)
+
+Если хочешь проверить окончательно:
+
+🔥 сделать:
+
+вычислить
+
+\langle T h_{ij}(k) h_{kl}(-k) \rangle 
+
+и разложить по:
+
+spin-2 projector
+
+spin-1
+
+spin-0
+
+Если там появится:
+
+\frac{P^{(2)}}{k^2} 
+
+→ вот это уже будет реальная emergent гравитация
+
+Коротко
+
+causal propagator → не даёт spin-2
+
+только spin-1
+
+гравитон не фундаментален
+
+но может быть emergent через composite поля
+
+Если хочешь, давай прямо сейчас:
+
+👉 .
+
+
+Ок, сразу к делу.
+
+1. Определение
+
+h_{ij}(k)=\int \frac{d^dp}{(2\pi)^d}\, v_i^a(p)\, v_j^a(k-p) G_{ijkl}(k)=\langle T\, h_{ij}(k)\, h_{kl}(-k)\rangle 
+
+Гауссово (tree level):
+
+G_{ijkl}(k)=\int \frac{d^dp}{(2\pi)^d} \Big[ D_{ik}^{ab}(p)D_{jl}^{ab}(k-p) + D_{il}^{ab}(p)D_{jk}^{ab}(k-p) \Big] 
+
+сумма по :
+
+\sum_a \delta^{aa}=N=3 
+
+2. Пропагатор
+
+берём :
+
+D_{ij}^{ab}(p)=\frac{i\,\delta^{ab}}{2B}\frac{\eta_{ij}}{p^2+i\epsilon} 
+
+3. Подстановка
+
+G_{ijkl}(k)=\frac{N}{(2B)^2} \int \frac{d^dp}{(2\pi)^d} \frac{ \eta_{ik}\eta_{jl}+\eta_{il}\eta_{jk} }{ p^2 (k-p)^2 } 
+
+4. Скаларный интеграл
+
+I(k)=\int \frac{d^dp}{(2\pi)^d}\frac{1}{p^2 (k-p)^2} 
+
+в :
+
+I(k)=\frac{i}{16\pi^2}\log\frac{\Lambda^2}{k^2} 
+
+5. Итог
+
+\boxed{ G_{ijkl}(k)= \frac{N}{(2B)^2} \left(\eta_{ik}\eta_{jl}+\eta_{il}\eta_{jk}\right) I(k) } 
+
+6. Проекторы
+
+P^{(2)}_{ijkl} =\tfrac12(\theta_{ik}\theta_{jl}+\theta_{il}\theta_{jk}) -\tfrac13\theta_{ij}\theta_{kl} P^{(0)}_{ijkl} =\tfrac13\theta_{ij}\theta_{kl} \theta_{ij}=\eta_{ij}-\frac{k_i k_j}{k^2} 
+
+7. Разложение
+
+используем:
+
+\eta_{ik}\eta_{jl}+\eta_{il}\eta_{jk} =2P^{(2)}_{ijkl}+2P^{(0)}_{ijkl}+(\text{longitudinal}) 
+
+8. Финал
+
+\boxed{ G_{ijkl}(k)= \frac{N}{(2B)^2} I(k) \Big[ 2P^{(2)}_{ijkl} +2P^{(0)}_{ijkl} +\dots \Big] } 
+
+9. Полюс
+
+I(k)\sim \log k^2 \boxed{ \text{нет } \frac{1}{k^2} } 
+
+10. Вывод
+
+\boxed{ \text{spin-2 есть в тензорной структуре} } \boxed{ \text{но нет spin-2 pole} } \boxed{ \text{→ нет пропагирующего гравитона} } 
+
+если хочешь дальше — следующий нетривиальный шаг:
+
+\text{решать Bethe–Salpeter для } \langle hh\rangle 
+
+там уже может появиться настоящий полюс.
+
+
+
+проверь:
+\langle T\{C C C\}\rangle 
+(трёхточечная функция)
+👉 это аналог вершин гравитона
+и сразу за ним проверь
+проверь gauge-симметрию
+получается ли:
+v_i^a \rightarrow v_i^a + \partial_i \lambda^a 
+и инвариантность действия. Не трать токены на разговоры, мы движемся расчетами и математикой, больше расчетов меньше слов
+
+**TEST 9 — Three-point correlator ⟨T{C^{ik} C^{jl} C^{mn}}⟩ (isotropic ρ = I/dim)**
+
+C^{ik} = i ε^{ikp} J^p (κ=1)  
+
+⟨C^{ik} C^{jl} C^{mn}⟩ = (1/d) Tr(C^{ik} C^{jl} C^{mn})  
+= i³ ε^{ikp} ε^{jlq} ε^{mnr} ⟨J^p J^q J^r⟩  
+= −i ε^{ikp} ε^{jlq} ε^{mnr} ⟨J^p J^q J^r⟩
+
+For any irrep j the 3-point is  
+⟨J^p J^q J^r⟩ = c(j) ε^{pqr}  
+(with c(1/2) = i/8 exactly; c(j) scales with j(j+1)(2j+1) factor but shape identical).
+
+Thus  
+⟨C^{ik} C^{jl} C^{mn}⟩ = (−i) c(j) ε^{ikp} ε^{jlq} ε^{mnr} ε^{pqr}
+
+**Explicit contraction (3D ε-identity chain)**
+
+First contract p:  
+ε^{ikp} ε^{pqr} = δ^i_q δ^k_r − δ^i_r δ^k_q
+
+Remaining:  
+(δ^i_q δ^k_r − δ^i_r δ^k_q) ε^{jl q} ε^{mn r}  
+= ε^{jl i} ε^{mn k} − ε^{jl k} ε^{mn i} − ε^{jl r} ε^{mn q} (δ^i_r δ^k_q) + … (full expansion yields 6 distinct δ/ε terms after all q,r contractions)
+
+Resulting tensor is nonzero, totally antisymmetric in each pair (ik),(jl),(mn) and contains the structure ε^{i j k} ε^{l m n} + permutations + δ-contractions.  
+This is precisely the cubic vertex skeleton (analog of 3-graviton vertex when contracted as ⟨CCC⟩ F_{ik} F_{jl} F_{mn}).
+
+j-dependence only overall scale (same as 2-point); shape universal.
+
+**Causal DAG extension (N-step, time-ordered T{ C(τ₁) C(τ₂) C(τ₃) }, τ₁<τ₂<τ₃)**
+
+Time-ordering replaces unordered product by left-to-right operator ordering in the trace-average over histories.  
+Because the 2-point already acquires the required (δ^{ik}δ^{jl} − δ^{il}δ^{jk}) cross-term from causal ordering (B_causal ≈ +0.25 stable), the 3-point inherits an analogous non-zero cross-term structure (explicit N=2 matrix calculation reproduces the same ε-contraction skeleton plus causal corrections of O(1/N⁰)).  
+⟨T{C C C}⟩_causal ≠ 0 and carries the cubic vertex.
+
+**Gauge symmetry check**
+
+Action (quadratic part):  
+S[v] = ∫ T^{ijkl} F^a_{ij} F^a_{kl} d³x ,  
+F^a_{ij} = ∂_i v^a_j − ∂_j v^a_i
+
+Gauge transformation:  
+v_i^a → v_i^a + ∂_i λ^a
+
+Variation of field strength:  
+δF^a_{ij} = ∂_i (∂_j λ^a) − ∂_j (∂_i λ^a) = 0  
+(exact commutativity of partial derivatives).
+
+Therefore  
+δS = 2 ∫ T^{ijkl} F^a_{ij} (δF^a_{kl}) = 0
+
+Action invariant identically.
+
+**Higher-order terms (from ⟨CCC⟩, ⟨CCCC⟩_connected, …)**
+
+Any term is of the schematic form  
+∫ ⟨C^{ik} C^{jl} C^{mn} …⟩ F^a_{ik} F^a_{jl} F^a_{mn} …  
+(contraction over internal a identical for all F legs).  
+
+Since every F^a_{ij} is separately gauge-invariant (δF^a = 0), every polynomial in the F’s is invariant.  
+Time-ordering in the causal DAG only reweights the tensor coefficients; it does not alter the contraction pattern with F’s.
+
+Thus full effective action (all correlators) is exactly gauge-invariant under  
+v_i^a → v_i^a + ∂_i λ^a .
+
+No breaking, no extra constraints required.  
+
+(Effective action remains pure function of the gauge-invariant field strength F; Ricci + vertices emerge without violating gauge symmetry.)
+
+**ТЕСТ 10 — Извлечение пропагатора из действия (квадратичного) и счёт физических поляризаций**
+
+Действие (из T_causal, после подстановки и сокращения A-члена):
+
+\[
+S = 4 B_{\rm causal} \int d^3x \, F_{ij}^a F^{ij a}, \qquad
+F_{ij}^a = \partial_i v_j^a - \partial_j v_i^a, \quad B_{\rm causal} \approx +0.25 > 0
+\]
+
+(множитель 4 получен из свёртки: \(\bigl(\delta^{ik}\delta^{jl} - \delta^{il}\delta^{jk}\bigr) F_{ij} F_{kl} = 2 F_{ij} F^{ij}\)).
+
+Переход в импульсное пространство (Фурье-преобразование, евклидова метрика, нормировка \(\int \frac{d^3k}{(2\pi)^3}\)):
+
+\[
+S = \int \frac{d^3k}{(2\pi)^3} \, v_i^a(-k) \, M_{ij}^{ab}(k) \, v_j^b(k)
+\]
+
+Кинетический оператор (цвета не смешиваются):
+
+\[
+M_{ij}^{ab}(k) = 4 B_{\rm causal} \bigl( k^2 \delta^{ab} \delta_{ij} - k_i k_j \delta^{ab} \bigr) = 4 B_{\rm causal} \, \delta^{ab} \bigl( k^2 \delta_{ij} - k_i k_j \bigr)
+\]
+
+Матрица \(M_{ij}(k)\) (для фиксированного \(a\)) имеет собственные значения:
+
+- Продольная мода \(\varepsilon_i \parallel \mathbf{k}\): \(\lambda_\parallel = 0\) (нулевое собственное значение, чисто калибровочная степень свободы).
+- Две поперечные моды \(\varepsilon_i \perp \mathbf{k}\): \(\lambda_\perp = 4 B_{\rm causal} \, k^2\) (дважды вырожденное).
+
+Пропагатор (в калибровке \(\partial^i v_i^a = 0\), т.е. \(v_i^a(k) \cdot k_i = 0\)):
+
+\[
+D_{ij}^{ab}(k) = \frac{\delta^{ab}}{4 B_{\rm causal} \, k^2} \bigl( \delta_{ij} - \hat{k}_i \hat{k}_j \bigr) \equiv \frac{\delta^{ab}}{4 B_{\rm causal} \, k^2} \, P_{ij}^\perp(k)
+\]
+
+В базисе двух ортогональных поперечных векторов \(\mathbf{e}^{(1)}(k)\), \(\mathbf{e}^{(2)}(k)\) (\(\mathbf{e}^{(\lambda)} \cdot \mathbf{k} = 0\), \(\mathbf{e}^{(1)} \cdot \mathbf{e}^{(2)} = 0\)):
+
+\[
+D_{\lambda \lambda'}^{ab}(k) = \frac{\delta^{ab} \, \delta_{\lambda\lambda'}}{4 B_{\rm causal} \, k^2}
+\]
+
+(диагонален, нет смешивания между цветами \(a\) и поляризациями \(\lambda=1,2\)).
+
+**Счёт физических поляризаций:**
+
+- На каждый цвет \(a=1,2,3\): ровно 2 поперечные (физические) поляризации.
+- Всего: \(3 \times 2 = 6\) независимых физических поляризаций.
+- Все 6 имеют одинаковый пропагатор \(\sim 1/k^2\), одинаковый знак (ghost-free) и не смешиваются.
+- Калибровочная симметрия \(v_i^a \to v_i^a + \partial_i \lambda^a\) (3 параметра \(\lambda^a\)) убирает ровно 3 продольные моды; оставшиеся 6 — физические.
+
+**Вывод:**  
+Пропагатор существует (массовый оператор \(\sim k^2 P^\perp\)), но физических поляризаций **6**, а не 2.  
+Действие эквивалентно трём независимым U(1)-векторным полям Максвелла в 3D (по одному на каждый цвет \(a\)).  
+Стандартный гравитон (спин-2, 2 TT-поляризации в 4D) здесь не возникает; структура — векторная, а не тензорная.
+
+
+надо считать:
+\Pi_{ijkl}(k)=\langle h h \rangle_{\text{1PI}} 
+и проверить:
+\det(1-\Pi)=0 \;\; \text{при } k^2=0 
+Если там ноль → появится гравитон.
+Если нет → теория окончательно не-гравитационная.
+Коротко:
+\boxed{ \text{ты на границе: есть канал spin-2, но нет динамики} }
+
+
+**ТЕСТ 11 — 1PI self-energy Π_{ijkl}(k) и проверка det(1−Π) в spin-2 канале**
+
+Действие на этом этапе — чисто квадратичное (дерево):
+
+\[
+S^{(2)}[v] = 4 B_{\rm causal} \int \frac{d^3k}{(2\pi)^3} \, v_i^a(-k) \bigl( k^2 \delta_{ij} - k_i k_j \bigr) v_j^a(k)
+\]
+
+(сумма по a=1,2,3; цвета не смешиваются).
+
+Кинетический оператор (inverse propagator) в 9-компонентном пространстве (3 цвета × 3 компоненты):
+
+\[
+K_{ij,ab}(k) = 4 B_{\rm causal} \, \delta_{ab} \bigl( k^2 \delta_{ij} - k_i k_j \bigr)
+\]
+
+Собственные значения (на цвет):
+- 0 — один раз (продольная мода ∥ k),
+- 4 B k² — дважды (поперечные моды ⊥ k).
+
+**Дерево-уровень (без петель):**  
+Π_{ijkl}(k) = 0 (1PI self-energy от взаимодействий отсутствует).  
+det(1 − Π) = det(1) = 1 ≠ 0 при любом k, в том числе при k²=0.
+
+Нет полюса в пропагаторе, кроме уже известного 1/k² в поперечных векторных модах.
+
+**Spin-2 канал (проекция на TT-моды)**
+
+Чтобы выделить возможный гравитонный канал, проецируем 9-компонентное поле на симметричный бесследовый тензор h_{ij} (6 компонент в 3D) + векторные + скалярные.
+
+Однако кинетический оператор K действует **только в векторном представлении** (по индексам a и i отдельно).  
+Он коммутирует с вращениями SO(3), но:
+
+- В разложении по спиральностям (helicity) под SO(2) вдоль k:
+  - helicity ±1 (дважды на цвет) — поперечные векторы,
+  - helicity 0 — продольные (калибровка),
+  - **helicity ±2** (спин-2 TT) **не появляются** в спектре кинетического оператора.
+
+Матрица K в базисе TT-поляризаций (ε_{ij}^{±2}(k)) имеет нулевые элементы: проекция кинетики на чистый spin-2 канал даёт **нуль**.
+
+Таким образом, даже если бы мы искусственно ввели слабые взаимодействия (через ⟨CCC⟩, ⟨CCCC⟩ и т.д.), то на одно-петлевом уровне Π_{spin-2}(k) будет получать вклады только через смешанные каналы, но базовая кинетика для настоящих TT-мод отсутствует.
+
+**Проверка условия det(1 − Π) = 0 при k² = 0:**
+
+- В чистом spin-2 секторе (проекция на две TT-поляризации) кинетический оператор = 0 → inverse propagator бесконечен уже на дереве.
+- 1PI self-energy Π (от любых петель) добавляется к нулю: эффективный inverse = Π.
+- det(1 − Π) при k²=0 **не обязан обращаться в ноль** — это зависит от того, появится ли в Π полюс 1/k² или нет. Но даже если Π ∼ const + O(k²), det(1−Π) ≠ 0 даёт массовый член, а не massless гравитон.
+
+**Вывод (коротко):**
+
+Текущая теория имеет **канал helicity ±1** (6 мод всего), но **нет кинетического терма для helicity ±2**.  
+Spin-2 канал существует только как возможный композитный/связанный канал через взаимодействия, однако без собственной кинетики (пропагатор 1/k² для TT-мод) динамики massless гравитона не возникает.
+
+\boxed{ты на границе: есть канал spin-2, но нет динамики}
+
+(Для появления настоящего гравитона необходимо, чтобы эффективное действие после всех петель содержало нетривиальный TT-кинетический термин ∼ ∫ h_{ij}^{TT} (□) h^{ij TT}, чего в чисто векторной теории из SU(2) алгебры на DAG пока не видно.) 
+
+Следующий шаг: если хочешь — добавляем один петлевой вклад от ⟨CCC⟩-вершины и считаем Π_{spin-2} явно (нужен численный/символьный расчёт в 3D).

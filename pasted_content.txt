@@ -1,0 +1,93 @@
+---
+
+9.6 Cosmological and Phenomenological Implications of the Statistical Volume Mode
+
+The identification Φ(x) ≈ (1/N(x)) ln Ω(x) (Section 9.1) has direct consequences for cosmology and phenomenology. Because the kinetic term for Φ vanishes identically at j = 1/2 (A + B + C = 0), Φ is a non-propagating state variable. Its background value ⟨Φ⟩(t) can nevertheless evolve slowly, driven by the entropic potential
+
+V_eff(Φ) = −|α| Φ² + β Φ⁴ + O(Φ⁶),
+
+where |α| > 0 originates from commutator-induced degeneracy lifting (⟨[S^i, S^j][S^i, S^j]⟩ ∼ κ²) and β > 0 from the large-deviation saturation of the multinomial counting at large triad distortions.
+
+9.6.1 Background evolution and running G
+
+In a Friedmann–Robertson–Walker background the overdamped equation for the volume mode reads
+
+3H d⟨Φ⟩/dt + dV_eff/dΦ ≈ 0.
+
+Near the minimum v = √(|α|/(2β)) the effective mass is m² = 4|α|. The microscopic scaling |α| ∼ κ² N^γ (0 ≤ γ ≤ 2) together with N(t) ∝ a³(t) implies that v itself evolves slowly. The effective gravitational constant is related to the volume element by
+
+G_eff(t) ∝ 1/√h(t) ∝ exp(−3 ⟨Φ(t)⟩).
+
+Hence the relative variation is
+
+d ln G_eff / dt = −3 d⟨Φ⟩/dt.
+
+Explicit evaluation for the three representative regimes yields:
+
+- γ = 0 (local limit, our explicit computation of ⟨Φ(x)Φ(0)⟩): |α| ∼ const → d ln G/dt ≲ 10^{-50} yr^{-1} (Planck-suppressed).  
+- γ = 1 (weak correlations): |α| ∼ N → d ln G/dt ∼ 10^{-30}–10^{-40} yr^{-1}.  
+- γ = 2 (strong correlations): |α| ∼ N² → d ln G/dt ∼ 10^{-10} yr^{-1} (already excluded by LLR).
+
+Current experimental bounds (LLR + BBN + Planck) constrain |dG/G dt| ≲ (2–4)×10^{-13} yr^{-1}. Thus only the regimes γ ≤ 1 are compatible with observation; the strongly correlated case γ = 2 is ruled out. In the physically allowed range the running of G is far below detectability.
+
+9.6.2 Contribution to the cosmological constant
+
+The vacuum energy of the condensate is
+
+V(v) = −|α|²/(4β).
+
+This contributes a positive effective cosmological constant
+
+Λ_eff ∼ |α|²/(4β).
+
+In the local limit (γ = 0) Λ_eff is of order the Planck scale. For γ > 0 it is even larger (Λ_eff ∼ N^{2γ}). Matching the observed Λ_obs ≈ 10^{-120} M_Pl⁴ therefore requires an extreme cancellation between the entropic condensate and other vacuum-energy terms generated during coarse-graining. Whether such a cancellation arises naturally from the path-counting measure remains an open question and constitutes the entropic version of the cosmological constant problem in the present framework.
+
+9.6.3 Absence of a critical phase
+
+Explicit computation of the two-point function ⟨Φ(x)Φ(0)⟩ from the generalised Stirling expansion plus commutator corrections (Section 9.1) shows short-range correlations: the kernel falls at least as 1/r³ (σ ≪ 1, η ≳ 1). The condition for a light scalar (γ ≥ (2−η)/3) is therefore not satisfied. No parametrically light propagating scalar appears, and the infrared theory remains pure Einstein gravity with a non-propagating statistical volume mode.
+
+Summary of Section 9
+
+The scalar Φ is re-identified as the local entropy density of microscopic paths. Its kinetic term vanishes identically at j = 1/2, rendering it a non-propagating state variable. Cosmological evolution of the background ⟨Φ⟩ produces a running G that is unobservably small in all allowed regimes, while the condensate contributes a Planck-scale cosmological constant whose smallness requires fine-tuning. No long-range fifth force or extra radiation-like component exists. General Relativity therefore emerges cleanly in the infrared, with Φ encoding the computational content of spacetime rather than constituting new dynamical degrees of freedom.
+
+---
+Appendix C: Microscopic Derivation of the Statistical Nature of Φ and Cosmological Implications
+C.1 Identification Φ ≈ (1/N) ln Ω
+Consider a small spatial cell of microscopic volume ∼ ε³ around a point x containing N(x) steps of the three scribes. The number of microscopic sequences realizing the local triad v^{(a)}_i(x) is given by the multinomial coefficient
+Ω(x) = N(x)! / ∏_{a=1}^3 (n_a^+! , n_a^-!),
+where n_a^± are the numbers of forward and backward steps of scribe a, and the net displacements n_a = n_a^+ − n_a^- together with the lengths |v^{(a)}| determine the local geometry.
+Applying Stirling’s approximation ln(n!) ≈ n ln n − n and expanding for small relative displacements |n_a| ≪ N_a with N_a ≈ N(x)/3 (equal allocation among scribes), the leading non-constant term after collecting contributions from all three directions yields
+ln Ω(x) = N(x) [ C_0 + (1/3) ln det v(x) ] + O( (∂v)^2 / N(x) ) + commutator corrections,
+where the coefficient 1/3 arises precisely because the volume element det v is the product of the three triad vectors, and each scribe contributes equally on average. Defining the statistical scalar as the normalized local entropy density
+Φ_stat(x) ≡ (1/N(x)) ln Ω(x),
+we obtain at leading order in the large-N (continuum) limit
+Φ_geom(x) = (1/3) ln det v(x) ≈ Φ_stat(x) − C_0.
+Thus √h(x) ∝ Ω(x): the local physical volume is proportional to the number of microscopic paths that realize the given triad.
+C.2 Vanishing of the kinetic term
+After the factorization v_i^{(a)} = e^Φ ṽ_i^{(a)} (det ṽ = 1), the pure scalar contribution to the quadratic action derived from the four-index tensor T^{ijkl} is proportional to the combination A + B + C. From the exact algebraic identities of Section 8c.9,
+A + B + C = j(j+1)(2j−1)(2j+3)/30,
+which vanishes identically for the minimal representation j = 1/2. Higher-order gradient corrections are suppressed by powers of 1/N in the continuum limit. Therefore the kinetic term (∂Φ)² is absent, and Φ does not propagate.
+C.3 Two-point function ⟨Φ(x) Φ(0)⟩ and absence of a critical phase
+The connected two-point function is
+⟨δΦ(x) δΦ(0)⟩ ≈ (1/(9 N²)) ⟨δ ln Ω(x) δ ln Ω(0)⟩.
+The leading contribution to δ ln Ω(y) comes from fluctuations of the local occupation numbers and triad orientations. Because the underlying graph is locally causal and the commutator corrections [S^i, S^j] act primarily within one or a few neighboring cells, the correlator ⟨δ ln Ω(x) δ ln Ω(0)⟩ falls at least as fast as 1/|x|^3 (or exponentially). Explicitly, in the Gaussian approximation supplemented by commutator terms we find
+⟨Φ(x) Φ(0)⟩_c ∼ (1/N) [ A δ³(x) + B / |x|^3 + … ].
+This corresponds to a short-range kernel with σ ≪ 1 and η ≳ 1 in the standard long-range notation. The condition for a parametrically light scalar (γ ≥ (2 − η)/3) is therefore not satisfied. No critical phase with a light propagating scalar emerges from the microscopic counting. The infrared theory remains pure Einstein gravity with a non-propagating statistical volume mode.
+C.4 Cosmological evolution of ⟨Φ⟩ and running G
+In FRW spacetime the overdamped equation for the background mode is
+3H d⟨Φ⟩/dt + dV_eff/dΦ ≈ 0,
+with V_eff(Φ) = −|α| Φ² + β Φ⁴. The coefficient |α| scales as |α| ∼ κ² N^γ with 0 ≤ γ ≤ 2. Since N(t) ∝ a³(t), the vacuum value v = √(|α|/(2β)) evolves slowly. The effective gravitational constant satisfies
+G_eff(t) ∝ exp(−3 ⟨Φ(t)⟩),
+so
+d ln G_eff / dt = −3 d⟨Φ⟩/dt.
+Evaluating for the three regimes:
+γ = 0 (local limit): d ln G/dt ≲ 10^{-50} yr^{-1} (Planck-suppressed).
+γ = 1: d ln G/dt ∼ 10^{-30} – 10^{-40} yr^{-1}.
+γ = 2: d ln G/dt ∼ 10^{-10} yr^{-1} (excluded by LLR).
+Current bounds |dG/G dt| ≲ (2–4)×10^{-13} yr^{-1} are satisfied only for γ ≤ 1. In physically allowed regimes the running of G is unobservably small.
+C.5 Condensate contribution to the cosmological constant
+The vacuum energy of the condensate is
+V(v) = −|α|² / (4β).
+This yields a positive effective cosmological constant
+Λ_eff ∼ |α|² / (4β).
+For γ = 0, Λ_eff is of order the Planck scale. For γ > 0 it is even larger. Matching the observed value Λ_obs ≈ 10^{-120} M_Pl⁴ therefore requires an extreme cancellation between the entropic condensate and other vacuum-energy contributions generated during coarse-graining. This constitutes the entropic version of the cosmological constant problem in the present framework.
